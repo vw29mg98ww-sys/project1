@@ -28,6 +28,7 @@
     'src/services/studyService.js',
     'src/services/backupService.js',
     'src/services/vocabService.js',
+    'src/services/wrongNoteService.js',
     'src/components/Layout.js',
     'src/components/Placeholder.js',
     'src/components/StatCard.js',

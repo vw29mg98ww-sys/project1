@@ -18,7 +18,9 @@
   }
 
   function backLink(state) {
-    return isPractice(state) ? { href: '#/part' + state.part, label: TM.constants.PARTS[state.part].name } : { href: '#/day?day=' + state.day, label: 'DAY ' + state.day };
+    if (!isPractice(state)) return { href: '#/day?day=' + state.day, label: 'DAY ' + state.day };
+    if (state.practice.returnTo) return { href: '#' + state.practice.returnTo, label: state.practice.returnLabel || '돌아가기' };
+    return { href: '#/part' + state.part, label: TM.constants.PARTS[state.part].name };
   }
 
   function renderHeader(state) {
@@ -60,7 +62,8 @@
 
   function renderNextActions(state, ctx) {
     if (isPractice(state)) {
-      return '<a class="btn btn-primary btn-lg" href="#/part' + state.part + '">' + esc(TM.constants.PARTS[state.part].name) + ' 화면으로</a>' +
+      var back = backLink(state);
+      return '<a class="btn btn-primary btn-lg" href="' + back.href + '">' + esc(back.label) + ' 화면으로</a>' +
         '<a class="btn" href="#/dashboard">Dashboard</a>';
     }
     var dayProgress = TM.dayService.computeDayProgress({ content: ctx.content, day: state.day, attempts: ctx.progress.getAttempts(), vocabState: ctx.progress.getVocabState() });
@@ -136,7 +139,8 @@
     menuPathFor: function (ctx, params) {
       if (params && params.mode === 'practice') {
         var p = ctx.progress.getPracticeSession();
-        return p ? '/part' + p.part : '/day';
+        if (!p) return '/day';
+        return p.returnTo ? p.returnTo.split('?')[0] : '/part' + p.part;
       }
       return '/day';
     },

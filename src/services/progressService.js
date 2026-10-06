@@ -120,7 +120,8 @@
       startPracticeSession: function (info) {
         var session = {
           id: now().getTime().toString(36),
-          title: info.title, part: info.part, mode: info.mode, type: info.type || null,
+          title: info.title, part: info.part || null, mode: info.mode, type: info.type || null,
+          returnTo: info.returnTo || null, returnLabel: info.returnLabel || null,
           ids: info.ids, index: 0, createdAt: now().toISOString()
         };
         storage.set(K.PRACTICE_SESSION, session);

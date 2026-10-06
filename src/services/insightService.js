@@ -39,7 +39,7 @@
       insights.push({ id: 'vocab-review', tone: 'info', message: '복습할 단어가 ' + stats.vocab.review + '개 있습니다.' });
     }
     if (stats.wrongNote > 0) {
-      insights.push({ id: 'wrong-note', tone: 'info', message: '오답노트에 다시 풀어야 할 문제가 ' + stats.wrongNote + '개 있습니다.' });
+      insights.push({ id: 'wrong-note', tone: 'info', href: '#/wrong-notes', message: '오답노트에 다시 풀어야 할 문제가 ' + stats.wrongNote + '개 있습니다.' });
     }
     // 기록이 어느 정도 쌓였는데 백업한 지 오래됐으면 알린다
     var remind = TM.backupService ? TM.backupService.REMIND_AFTER_DAYS : 7;

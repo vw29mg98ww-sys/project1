@@ -400,3 +400,37 @@
 .bad-text { color: var(--color-danger); font-weight: 700; }
 .key-word { text-decoration: none; }
 .more-row { text-align: center; padding: 14px 0; border-top: 1px solid var(--color-border); }
+
+/* ───────── 오답노트 ───────── */
+.note-summary-card { margin-bottom: 12px; }
+.note-counts { display: flex; flex-wrap: wrap; gap: 12px 40px; }
+.note-summary-card p { margin: 10px 0 0; }
+.quick-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.quick-chip {
+  padding: 7px 14px; border-radius: 999px; cursor: pointer; font-weight: 600; font-size: .9rem;
+  border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
+}
+.quick-chip:hover { border-color: var(--color-primary); }
+.quick-chip.is-active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+.note-filters { display: grid; gap: 10px; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 12px; margin-bottom: 12px; }
+@media (max-width: 899px) { .note-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.filter-field { display: flex; flex-direction: column; gap: 4px; font-size: .8rem; color: var(--color-muted); font-weight: 600; min-width: 0; }
+.note-list-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 4px 0 12px; flex-wrap: wrap; }
+.note-card { margin-bottom: 12px; }
+.note-card.is-resolved { opacity: .8; }
+.note-head { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 6px; }
+.note-head .chip { margin: 0; }
+.note-label { font-weight: 800; text-decoration: none; }
+.note-meta { margin-left: auto; }
+.note-status { padding: 2px 8px; border-radius: 999px; font-size: .78rem; font-weight: 700; }
+.note-status.is-open { background: var(--color-danger-soft); color: var(--color-danger); }
+.note-status.is-resolved { background: var(--color-success-soft); color: var(--color-success); }
+.note-question { font-weight: 600; margin: 6px 0 8px; }
+.note-answers { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-bottom: 6px; font-size: .95rem; }
+.note-summary { margin: 0 0 10px; color: var(--color-muted); font-size: .92rem; }
+.note-row { display: grid; grid-template-columns: 6em 1fr; gap: 10px; align-items: start; padding: 8px 0; border-top: 1px solid var(--color-border); }
+@media (max-width: 599px) { .note-row { grid-template-columns: 1fr; gap: 6px; } }
+.note-row-label { font-weight: 700; font-size: .85rem; color: var(--color-muted); padding-top: 6px; }
+.note-words { display: flex; flex-wrap: wrap; gap: 6px 14px; padding-top: 4px; }
+.note-words a { text-decoration: none; font-size: .92rem; }
+.note-actions { display: flex; justify-content: flex-end; gap: 8px; padding-top: 10px; border-top: 1px solid var(--color-border); }

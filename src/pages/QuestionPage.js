@@ -59,7 +59,11 @@
           if (history.length > 1) history.back(); else ctx.router.navigate('/dashboard');
         } else if (btn.dataset.action === 'retry') {
           var q = ctx.content.getQuestion(params.id);
-          var session = ctx.progress.startPracticeSession({ title: '다시 풀기 · ' + ctx.content.questionLabel(q.question_id), part: q.part, mode: 'retry', ids: [q.question_id] });
+          var fromNotes = params.from === 'wrong-notes';
+          var session = ctx.progress.startPracticeSession({
+            title: '다시 풀기 · ' + ctx.content.questionLabel(q.question_id), part: q.part, mode: 'retry', ids: [q.question_id],
+            returnTo: fromNotes ? '/wrong-notes' : null, returnLabel: fromNotes ? '오답노트' : null
+          });
           ctx.router.navigate('/study?mode=practice&sid=' + session.id);
         }
       }
