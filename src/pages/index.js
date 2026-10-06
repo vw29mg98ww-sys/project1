@@ -8,6 +8,8 @@
     '/dashboard': P.dashboard,
     '/day': P.day,
     '/study': P.study,            // 메뉴에는 없고 DAY 화면에서 들어가는 학습 화면
+    '/vocab-study': P.vocabStudy, // 단어 복습 세트
+    '/question': P.question,      // 문제 상세 (관련 문제, 오답노트에서 연결)
     '/part5': P.createPartPage(5),
     '/part6': P.createPartPage(6),
     '/part7': P.createPartPage(7),

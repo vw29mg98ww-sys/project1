@@ -36,6 +36,15 @@
     words.forEach(function (w) { if (w.day) daySet.add(w.day); });
     var days = Array.from(daySet).sort(function (a, b) { return a - b; });
 
+    // 문제 번호: 같은 DAY·Part 안에서 데이터 순서대로 1, 2, 3 …
+    var questionNumber = {};
+    var counters = {};
+    questions.forEach(function (q) {
+      var key = q.day + '-' + q.part;
+      counters[key] = (counters[key] || 0) + 1;
+      questionNumber[q.question_id] = counters[key];
+    });
+
     return {
       passages: passages,
       questions: questions,
@@ -46,6 +55,11 @@
       getPassage: function (id) { return passageById.get(id) || null; },
       getWord: function (word) { return wordByKey.get(lower(word)) || null; },
       getRelatedQuestions: function (word) { return questionsByWord.get(lower(word)) || []; },
+      // 'DAY 1 · Part 5 · Question 3'
+      questionLabel: function (id) {
+        var q = questionById.get(id);
+        return q ? 'DAY ' + q.day + ' · Part ' + q.part + ' · Question ' + questionNumber[id] : id;
+      },
       // filter 예: { day: 1, part: 5 } — 생략한 조건은 전체
       getQuestions: function (filter) {
         filter = filter || {};

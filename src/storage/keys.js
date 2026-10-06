@@ -7,6 +7,7 @@
     META: 'meta',                     // 저장된 데이터 형식 버전 { schemaVersion }
     PROFILE: 'profile',               // 학습 시작일, 현재 DAY, 연속 학습일
     PRACTICE_SESSION: 'practiceSession', // Part별 연습 중인 문제 세트 { id, title, ids, index }
+    VOCAB_SESSION: 'vocabSession',    // 단어 복습 중인 단어 세트 { id, title, words, index }
     DAY_PROGRESS: 'dayProgress',      // DAY별 진행률 (현재는 기록에서 계산하므로 예약만 해 둠)
     ATTEMPTS: 'attempts',             // 문제별 풀이 기록(선택한 답, 정답 여부, 풀이 시간, 오답 원인)
     VOCAB_STATE: 'vocabState',        // 단어별 학습 상태

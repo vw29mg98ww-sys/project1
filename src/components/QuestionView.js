@@ -49,7 +49,7 @@
     var words = (question.vocabulary || []).map(function (w) { return content.getWord(w); }).filter(Boolean);
     if (!words.length) return '';
     return '<ul class="key-words">' + words.map(function (w) {
-      return '<li><b>' + esc(w.word) + '</b> <span class="muted">' + esc(w.part_of_speech || '') + '</span> ' + esc(w.meaning) + '</li>';
+      return '<li><a class="key-word" href="#/vocabulary?q=' + encodeURIComponent(w.word) + '"><b>' + esc(w.word) + '</b></a> <span class="muted">' + esc(w.part_of_speech || '') + '</span> ' + esc(w.meaning) + '</li>';
     }).join('') + '</ul>';
   }
 
@@ -116,6 +116,26 @@
     '</div>';
   }
 
+  // 문제 상세 화면용 전체 해설: 정답 근거, 문맥, 구조, 보기별 오답 이유, 핵심 어휘, 유형, 주의점
+  function renderExplanation(question, content) {
+    var ex = question.explanation || {};
+    var wrongs = ex.wrong_choices ? Object.keys(ex.wrong_choices).sort().map(function (l) {
+      return '<li><b>(' + l + ')</b> ' + esc(ex.wrong_choices[l]) + '</li>';
+    }).join('') : '';
+    return '<div class="feedback is-explain">' +
+      '<div class="fb-head"><span class="fb-title">정답 (' + esc(question.correct_answer) + ') ' + esc(question.choices[LETTERS().indexOf(question.correct_answer)]) + '</span></div>' +
+      '<p class="fb-summary">' + esc(ex.summary) + '</p>' +
+      detailRow('정답 근거', ex.evidence ? esc(ex.evidence) : '') +
+      detailRow('앞뒤 문맥', renderContext(ex.context_analysis)) +
+      detailRow('문장 구조', ex.structure ? esc(ex.structure) : '') +
+      detailRow('오답 보기', wrongs ? '<ul class="wrong-list">' + wrongs + '</ul>' : '') +
+      detailRow('핵심 어휘', renderKeyWords(question, content)) +
+      detailRow('문제 유형', questionTypeText(question)) +
+      detailRow('다음에 주의할 점', ex.tip ? esc(ex.tip) : '') +
+    '</div>';
+  }
+
+  TM.components.renderExplanation = renderExplanation;
   TM.components.renderPassage = renderPassage;
   TM.components.renderChoices = renderChoices;
   TM.components.renderFeedback = renderFeedback;

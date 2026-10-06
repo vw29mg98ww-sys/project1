@@ -322,3 +322,82 @@
   .type-table th, .type-table td { padding: 10px 4px; }
   .type-acc { min-width: 90px; }
 }
+
+/* ───────── 단어 카드 ───────── */
+.word-card { max-width: 640px; margin: 0 auto; text-align: center; padding: 28px 24px; }
+.word-top { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.word-top .chip { margin: 0; }
+.word-text { font-size: 2.6rem; font-weight: 800; letter-spacing: -.01em; margin: 18px 0 10px; word-break: break-word; }
+.word-flip { margin: 12px 0 8px; min-width: 200px; }
+.word-meaning { font-size: 1.45rem; font-weight: 700; color: var(--color-primary); margin-bottom: 8px; }
+.word-example { font-family: var(--font-reading); font-style: italic; color: var(--color-muted); margin: 6px 0 12px; }
+.word-related { text-align: left; margin: 14px auto 8px; max-width: 420px; padding: 10px 14px; border-radius: var(--radius-md); background: var(--color-surface-2); }
+.word-related ul, .wr-related { margin: 4px 0 0; padding-left: 18px; }
+.word-section-label { font-weight: 700; font-size: .85rem; color: var(--color-muted); margin-top: 6px; }
+.mastery-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 22px; }
+.mastery-btn { padding: 12px 8px; font-size: 1rem; }
+.mastery-unknown { border-color: var(--color-danger); color: var(--color-danger); }
+.mastery-confused { border-color: var(--color-warning); color: var(--color-warning); }
+.mastery-known { border-color: var(--color-success); color: var(--color-success); }
+.mastery-unknown:hover, .mastery-unknown.is-current { background: var(--color-danger-soft); border-color: var(--color-danger); }
+.mastery-confused:hover, .mastery-confused.is-current { background: var(--color-warning-soft); border-color: var(--color-warning); }
+.mastery-known:hover, .mastery-known.is-current { background: var(--color-success-soft); border-color: var(--color-success); }
+.mastery-btn.is-current { font-weight: 800; }
+.word-nav { display: flex; justify-content: space-between; margin-top: 14px; }
+.word-status { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .78rem; font-weight: 700; white-space: nowrap; background: var(--color-surface-2); color: var(--color-muted); }
+.word-status.status-unknown, .status-unknown { color: var(--color-danger); }
+.word-status.status-unknown { background: var(--color-danger-soft); }
+.word-status.status-confused, .status-confused { color: var(--color-warning); }
+.word-status.status-confused { background: var(--color-warning-soft); }
+.word-status.status-review { background: var(--color-warning-soft); color: var(--color-warning); }
+.word-status.status-known, .status-known { color: var(--color-success); }
+.word-status.status-known { background: var(--color-success-soft); }
+.summary-counts { font-weight: 700; margin-top: 4px; }
+
+/* ───────── Vocabulary 화면 ───────── */
+.vocab-hero { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+.vocab-hero-main { flex: 1 1 260px; }
+.vocab-hero-main .meter { margin-top: 8px; }
+.vocab-hero-actions { display: flex; flex-direction: column; gap: 8px; }
+@media (max-width: 599px) { .vocab-hero-actions { width: 100%; } }
+.vocab-stats { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); margin-bottom: 12px; }
+.vocab-stat { padding: 10px 14px; text-decoration: none; color: var(--color-text); }
+.vocab-stat:hover { border-color: var(--color-primary); }
+.vocab-stat .stat-value { font-size: 1.3rem; }
+.vocab-filters { display: grid; gap: 8px; grid-template-columns: 2fr 1fr 1fr 1fr; padding: 12px; margin-bottom: 12px; }
+@media (max-width: 699px) { .vocab-filters { grid-template-columns: 1fr 1fr; } .vocab-filters input { grid-column: 1 / -1; } }
+.input {
+  width: 100%; padding: 9px 12px; border-radius: var(--radius-md); font: inherit; font-size: .95rem;
+  border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
+}
+.input:focus { outline: 2px solid var(--color-primary); outline-offset: 0; border-color: var(--color-primary); }
+.word-list { padding: 4px 16px; }
+.list-count { padding: 10px 0 6px; }
+.empty-list { padding: 20px 0; text-align: center; }
+.word-row { border-top: 1px solid var(--color-border); }
+.word-row summary { display: grid; grid-template-columns: minmax(0, 1.2fr) 3.5em minmax(0, 2fr) auto; align-items: center; gap: 10px; padding: 12px 0; cursor: pointer; list-style: none; }
+.word-row summary::-webkit-details-marker { display: none; }
+.word-row[open] summary { font-weight: 600; }
+.wr-word { font-weight: 700; word-break: break-word; }
+.wr-meaning { min-width: 0; }
+@media (max-width: 599px) {
+  .word-row summary { grid-template-columns: minmax(0, 1fr) auto; }
+  .wr-pos { display: none; }
+  .wr-meaning { grid-column: 1 / 2; grid-row: 2; color: var(--color-muted); font-size: .9rem; }
+}
+.wr-detail { padding: 0 0 14px; }
+.wr-detail .word-example { margin: 0 0 6px; }
+.small-buttons { max-width: 360px; margin-top: 10px; }
+.small-buttons .mastery-btn { padding: 6px; font-size: .85rem; }
+
+/* ───────── 문제 상세 ───────── */
+.link-button { background: none; border: 0; padding: 0; color: var(--color-primary); cursor: pointer; font: inherit; font-size: .9rem; }
+.feedback.is-explain { border-color: var(--color-primary); background: var(--color-primary-soft); }
+.feedback.is-explain .fb-title { color: var(--color-primary); }
+.wrong-list { margin: 0; padding-left: 0; list-style: none; }
+.wrong-list li { margin-bottom: 4px; }
+.history-list { list-style: none; padding: 0; margin: 0; }
+.history-list li { padding: 6px 0; border-bottom: 1px solid var(--color-border); font-size: .92rem; }
+.bad-text { color: var(--color-danger); font-weight: 700; }
+.key-word { text-decoration: none; }
+.more-row { text-align: center; padding: 14px 0; border-top: 1px solid var(--color-border); }

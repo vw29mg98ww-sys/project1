@@ -127,6 +127,17 @@
         return session;
       },
       getPracticeSession: function () { return storage.get(K.PRACTICE_SESSION, null); },
+      // 단어 복습 세트 (Vocabulary 화면에서 시작). 새로고침해도 같은 단어·순서로 이어서 학습한다
+      startVocabSession: function (info) {
+        var session = { id: now().getTime().toString(36), title: info.title, words: info.words, index: 0, createdAt: now().toISOString() };
+        storage.set(K.VOCAB_SESSION, session);
+        return session;
+      },
+      getVocabSession: function () { return storage.get(K.VOCAB_SESSION, null); },
+      saveVocabIndex: function (index) {
+        storage.update(K.VOCAB_SESSION, function (s) { return s ? Object.assign({}, s, { index: index }) : s; }, null);
+      },
+
       savePracticeIndex: function (index) {
         storage.update(K.PRACTICE_SESSION, function (s) { return s ? Object.assign({}, s, { index: index }) : s; }, null);
       },

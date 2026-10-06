@@ -2,7 +2,7 @@
 //   DAY 학습:   #/study?day=1&section=part5&q=0
 //   Part 연습:  #/study?mode=practice&sid=세트ID&q=0  (Part 5/6/7 화면에서 만든 연습 세트)
 // 문제 하나를 보여주고 → 답 선택 → 즉시 채점·저장 → 해설 → 다음 문제. 마지막 문제 뒤에는 결과 요약.
-// 단어(Vocabulary) 영역은 STEP 7에서 구현한다.
+// DAY의 단어(Vocabulary) 영역은 단어 카드 화면(VocabStudyPage.js)으로 넘긴다.
 (function (TM) {
   'use strict';
 
@@ -119,15 +119,7 @@
     if (!day || !section || ctx.content.days.indexOf(day) < 0) {
       return { page: messagePage('학습할 DAY와 영역을 선택하세요', '', '#/day', 'DAY 학습으로') };
     }
-    if (section.kind === 'vocab') {
-      return { page: TM.components.renderPlaceholder({
-        before: '<a class="back-link" href="#/day?day=' + day + '">← DAY ' + day + '</a>',
-        title: 'DAY ' + day + ' · Vocabulary',
-        description: '학습 대상 ' + ctx.content.getWords({ day: day }).length + '개',
-        step: 7,
-        features: ['단어 카드로 뜻 확인', '모름 / 헷갈림 / 알고 있음 선택', '단어가 나온 문제 함께 보기']
-      }) };
-    }
+    if (section.kind === 'vocab') return { vocab: true };
     var session = TM.studyService.buildSession(ctx.content, day, section.id, ctx.progress.getAttempts(), params.q);
     if (!session.items.length) {
       return { page: '<section class="page"><a class="back-link" href="#/day?day=' + day + '">← DAY ' + day + '</a>' +
@@ -150,10 +142,12 @@
     },
     render: function (ctx, params) {
       var r = resolve(ctx, params);
+      if (r.vocab) return TM.pages.vocabStudy.render(ctx, params); // DAY 단어 영역
       return r.page || '<section class="page study" data-study></section>';
     },
 
     mount: function (root, ctx, params) {
+      if (root.querySelector('[data-vocab-study]')) return TM.pages.vocabStudy.mount(root, ctx, params);
       var host = root.querySelector('[data-study]');
       if (!host) return null;
       var session = resolve(ctx, params).session;
