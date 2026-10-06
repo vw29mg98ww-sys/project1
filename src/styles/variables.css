@@ -18,6 +18,21 @@
   --color-warning-soft: #fff4e0;
   --color-on-status: #ffffff;   /* 성공·오류 알림 위 글자색 */
 
+  /* 그래프 색상 (색각 이상 검증을 통과한 순서. 범주 1~4, 크기를 나타내는 단색 단계, 격자) */
+  --viz-1: #2a78d6;
+  --viz-2: #eb6834;
+  --viz-3: #1baf7a;
+  --viz-4: #eda100;
+  --viz-rest: #c9ccd6;
+  --viz-grid: #e6e8ef;
+  --viz-axis: #c3c6d1;
+  --viz-area: rgba(42, 120, 214, .10);
+  --heat-0: #eef0f5;
+  --heat-1: #cde2fb;
+  --heat-2: #86b6ef;
+  --heat-3: #3987e5;
+  --heat-4: #1c5cab;
+
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -52,6 +67,19 @@
     --color-warning-soft: #3a2e1a;
     --shadow-sm: none;
     --color-on-status: #10131c;
+    --viz-1: #3987e5;
+    --viz-2: #d95926;
+    --viz-3: #199e70;
+    --viz-4: #c98500;
+    --viz-rest: #3a3f50;
+    --viz-grid: #2a2e3b;
+    --viz-axis: #3a3f50;
+    --viz-area: rgba(57, 135, 229, .14);
+    --heat-0: #232734;
+    --heat-1: #184f95;
+    --heat-2: #256abf;
+    --heat-3: #3987e5;
+    --heat-4: #86b6ef;
     color-scheme: dark;
   }
 }
@@ -76,5 +104,18 @@
   --color-warning-soft: #3a2e1a;
   --shadow-sm: none;
   --color-on-status: #10131c;
+  --viz-1: #3987e5;
+  --viz-2: #d95926;
+  --viz-3: #199e70;
+  --viz-4: #c98500;
+  --viz-rest: #3a3f50;
+  --viz-grid: #2a2e3b;
+  --viz-axis: #3a3f50;
+  --viz-area: rgba(57, 135, 229, .14);
+  --heat-0: #232734;
+  --heat-1: #184f95;
+  --heat-2: #256abf;
+  --heat-3: #3987e5;
+  --heat-4: #86b6ef;
   color-scheme: dark;
 }

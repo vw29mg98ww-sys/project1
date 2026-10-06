@@ -90,6 +90,13 @@
     // 맞춤 난이도: 최근 N문제 정답률이 UP 이상이면 한 단계 올리고, DOWN 미만이면 내린다
     ADAPTIVE: { WINDOW: 10, MIN_ATTEMPTS: 5, UP: 80, DOWN: 50, SET_SIZE: { 5: 10, 6: 8, 7: 10 } },
 
+    // 학습분석: 기간 선택과 Part별 목표 풀이 시간(초). 실제 시험 RC 75분 기준의 권장 속도
+    ANALYTICS: {
+      RANGES: [{ days: 7, label: '최근 7일' }, { days: 30, label: '최근 30일' }, { days: 90, label: '최근 90일' }],
+      TARGET_SECONDS: { 5: 25, 6: 35, 7: 70 },
+      HEATMAP_WEEKS: 12
+    },
+
     // 오답 원인 분석 기준
     WEAKNESS: {
       RECENT_WINDOW: 50,      // 최근 몇 문제를 볼지

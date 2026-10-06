@@ -25,10 +25,21 @@
     }
   };
 
+  // 테스트 함수가 Promise를 돌려주면(비동기 테스트) 끝날 때까지 기다린다
   window.runTests = function () {
-    var results = cases.map(function (c) {
-      try { c.fn(); return { name: c.name, ok: true }; } catch (e) { return { name: c.name, ok: false, error: e.message }; }
+    var results = [];
+    var chain = Promise.resolve();
+    cases.forEach(function (c) {
+      chain = chain.then(function () {
+        return Promise.resolve().then(c.fn)
+          .then(function () { results.push({ name: c.name, ok: true }); },
+                function (e) { results.push({ name: c.name, ok: false, error: e && e.message ? e.message : String(e) }); });
+      });
     });
+    return chain.then(function () { report(results); });
+  };
+
+  function report(results) {
     var failed = results.filter(function (r) { return !r.ok; }).length;
     var out = document.getElementById('results');
     out.innerHTML = '<h1 class="' + (failed ? 'fail' : 'pass') + '">' +
@@ -38,5 +49,5 @@
           (r.error ? '<pre>' + TM.dom.escapeHtml(r.error) + '</pre>' : '') + '</li>';
       }).join('') + '</ul>';
     window.testResults = { total: results.length, failed: failed, results: results };
-  };
+  }
 })();
