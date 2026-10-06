@@ -58,7 +58,8 @@
       '<h2 class="insight-title">학습 진단</h2>' +
       (insights.length
         ? '<ul class="insight-list">' + insights.map(function (i) {
-            return '<li class="insight insight-' + i.tone + '">' + esc(i.message) + '</li>';
+            var text = i.href ? '<a href="' + i.href + '">' + esc(i.message) + '</a>' : esc(i.message);
+            return '<li class="insight insight-' + i.tone + '">' + text + '</li>';
           }).join('') + '</ul>'
         : '<p class="muted">좋은 흐름입니다. 오늘의 학습을 이어가세요.</p>') +
       reasons +
@@ -83,7 +84,8 @@
         attempts: ctx.progress.getAttempts(),
         profile: ctx.progress.getProfile(),
         vocabState: ctx.progress.getVocabState(),
-        today: TM.date.toDateKey(new Date())
+        today: TM.date.toDateKey(new Date()),
+        lastBackupAt: TM.backupService.lastBackupAt(ctx.storage)
       });
 
       var partCards = [5, 6, 7].map(function (p) {

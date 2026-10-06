@@ -19,7 +19,7 @@
     return { tagged: tagged.length, enough: tagged.length >= cfg.MIN_TAGGED, distribution: distribution };
   }
 
-  // data: { attempts, profile, vocabState, today: 'YYYY-MM-DD' }
+  // data: { attempts, profile, vocabState, today: 'YYYY-MM-DD', lastBackupAt?: ISO 시각 }
   function computeDashboard(data) {
     var attempts = data.attempts || [];
     var profile = data.profile;
@@ -57,6 +57,8 @@
       parts: parts,
       wrongNote: wrongNote,
       vocab: vocab,
+      // 마지막 백업 후 지난 날 수 (null = 한 번도 안 함)
+      daysSinceBackup: data.lastBackupAt ? Math.floor((TM.date.parseDateKey(data.today) - TM.date.parseDateKey(TM.date.toDateKey(new Date(data.lastBackupAt)))) / 86400000) : null,
       estimate: TM.scoreService.estimateScore(attempts),
       weakness: analyzeWrongReasons(attempts)
     };

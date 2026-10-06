@@ -1,5 +1,5 @@
 // 학습 기록에서 안내 문장을 만든다.
-// 지금은 규칙 기반이고, 나중에 AI 분석을 붙일 때는 같은 형식({ id, tone, message })의 목록을
+// 지금은 규칙 기반이고, 나중에 AI 분석을 붙일 때는 같은 형식({ id, tone, message, href? })의 목록을
 // 돌려주는 함수로 교체하거나 결과를 이어 붙이면 화면 코드는 그대로 쓸 수 있다.
 (function (TM) {
   'use strict';
@@ -34,6 +34,15 @@
     }
     if (stats.wrongNote > 0) {
       insights.push({ id: 'wrong-note', tone: 'info', message: '오답노트에 다시 풀어야 할 문제가 ' + stats.wrongNote + '개 있습니다.' });
+    }
+    // 기록이 어느 정도 쌓였는데 백업한 지 오래됐으면 알린다
+    var remind = TM.backupService ? TM.backupService.REMIND_AFTER_DAYS : 7;
+    if (stats.totalAttempts >= 20 && (stats.daysSinceBackup === null || stats.daysSinceBackup >= remind)) {
+      insights.push({
+        id: 'backup', tone: 'info', href: '#/settings',
+        message: stats.daysSinceBackup === null ? '학습 기록을 아직 백업하지 않았습니다. 설정에서 백업 파일을 내려받아 두세요.'
+          : '마지막 백업 후 ' + stats.daysSinceBackup + '일이 지났습니다. 설정에서 백업하세요.'
+      });
     }
     if (!stats.studiedToday && stats.streak > 0) {
       insights.push({ id: 'streak', tone: 'info', message: '오늘 학습하면 연속 학습 ' + (stats.streak + 1) + '일이 됩니다.' });
