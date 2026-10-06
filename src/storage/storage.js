@@ -3,7 +3,8 @@
 // 그래서 나중에 IndexedDB나 서버 저장으로 바꿀 때 이 파일만 고치면 된다.
 //
 // 저장 방식: 키마다 { v: 데이터 형식 버전, savedAt, data } 형태의 JSON 문자열.
-// localStorage는 브라우저마다 약 5MB까지 저장할 수 있다(문제 풀이 기록 약 1만 5천 건 분량).
+// localStorage는 브라우저마다 약 500만 글자까지 저장할 수 있다(실측: Chromium 약 520만 글자).
+// 풀이 기록 1건은 약 230글자라서 약 2만 건(하루 30문제씩 약 2년)을 저장할 수 있다.
 (function (TM) {
   'use strict';
 
@@ -11,7 +12,7 @@
   var APP_ID = 'toeic-900-master';
   // 데이터 형식 버전. 저장 형식을 바꿀 때 올리고 storage/migrations.js에 변환 방법을 추가한다.
   var SCHEMA_VERSION = 1;
-  var QUOTA_BYTES = 5 * 1024 * 1024;
+  var QUOTA_CHARS = 5000000; // 브라우저 한도보다 조금 낮게 잡은 안전 기준
 
   // 메모리 저장소: localStorage를 쓸 수 없는 환경(일부 개인정보 보호 모드)이나 테스트에서 사용
   function createMemoryBackend() {
@@ -100,17 +101,17 @@
         ownKeys().forEach(function (k) { store.removeItem(fullKey(k)); });
       },
 
-      // 사용 중인 저장 공간 (localStorage는 문자를 UTF-16, 글자당 2바이트로 저장한다)
+      // 사용 중인 저장 공간. 브라우저 한도는 글자 수 기준이므로 글자 수로 센다.
       usage: function () {
-        var bytes = 0;
+        var chars = 0;
         var byKey = {};
         ownKeys().forEach(function (k) {
           var raw = store.getItem(fullKey(k)) || '';
-          var size = (fullKey(k).length + raw.length) * 2;
+          var size = fullKey(k).length + raw.length;
           byKey[k] = size;
-          bytes += size;
+          chars += size;
         });
-        return { bytes: bytes, quotaBytes: QUOTA_BYTES, ratio: bytes / QUOTA_BYTES, byKey: byKey };
+        return { chars: chars, quotaChars: QUOTA_CHARS, ratio: chars / QUOTA_CHARS, byKey: byKey };
       },
 
       // 백업: 모든 학습 기록을 하나의 객체로 내보낸다

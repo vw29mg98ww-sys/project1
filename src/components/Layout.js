@@ -10,6 +10,7 @@
     var esc = TM.dom.escapeHtml;
 
     root.innerHTML =
+      '<a class="skip-link" href="#main" data-skip>본문으로 건너뛰기</a>' +
       '<header class="topbar">' +
         '<button class="icon-button menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="sidebar">' +
           '<span></span><span></span><span></span>' +
@@ -39,6 +40,8 @@
       toggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
     }
 
+    // 해시 주소를 쓰므로 '본문으로 건너뛰기'는 주소를 바꾸지 않고 초점만 옮긴다
+    root.querySelector('[data-skip]').addEventListener('click', function (e) { e.preventDefault(); outlet.focus(); });
     toggle.addEventListener('click', function () { setMenuOpen(!sidebar.classList.contains('open')); });
     backdrop.addEventListener('click', function () { setMenuOpen(false); });
     sidebar.addEventListener('click', function (e) { if (e.target.closest('a')) setMenuOpen(false); });

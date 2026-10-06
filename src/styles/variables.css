@@ -4,17 +4,17 @@
   --color-surface: #ffffff;
   --color-surface-2: #f0f2f8;
   --color-text: #1b1f2e;
-  --color-muted: #6b7189;
+  --color-muted: #5f6680;
   --color-border: #e2e5ef;
-  --color-primary: #3d5afe;
-  --color-primary-hover: #2f49e0;
+  --color-primary: #3450f0;
+  --color-primary-hover: #2a43d6;
   --color-primary-soft: #e9edff;
   --color-on-primary: #ffffff;
   --color-success: #2e7d32;
   --color-success-soft: #e7f5e9;
   --color-danger: #c62828;
   --color-danger-soft: #fdecec;
-  --color-warning: #b26a00;
+  --color-warning: #975a00;
   --color-warning-soft: #fff4e0;
   --color-on-status: #ffffff;   /* 성공·오류 알림 위 글자색 */
 

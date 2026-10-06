@@ -19,7 +19,8 @@
         (title || docs.length > 1 ? '<div class="passage-title">' + (docs.length > 1 ? '<span class="passage-no">' + (i + 1) + '/' + docs.length + '</span>' : '') + esc(title) + '</div>' : '') +
         '<div class="passage-body">' + body + '</div></article>';
     }).join('');
-    return '<div class="card passage">' + html + '</div>';
+    var label = docs.length > 1 ? '지문 (문서 ' + docs.length + '개)' : '지문';
+    return '<details class="card passage" open><summary class="passage-summary"><span>' + label + '</span><span class="passage-toggle-hint muted small"></span></summary>' + html + '</details>';
   }
 
   function renderChoices(question, attempt) {

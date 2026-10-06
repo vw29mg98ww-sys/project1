@@ -75,6 +75,38 @@
     return { href: TM.dayService.studyLink(pos.day, pos.section, pos.index), text: 'DAY ' + pos.day + ' · ' + TM.dayService.getSection(pos.section).label };
   }
 
+  // 처음 사용하는 분을 위한 안내 (닫으면 다시 나오지 않음)
+  function renderOnboarding() {
+    return '<section class="card onboarding" aria-labelledby="onb-title">' +
+      '<h2 id="onb-title">처음 오셨나요? 이렇게 공부하세요</h2>' +
+      '<ol class="onb-steps">' +
+        '<li><b>오늘의 학습 시작</b>을 누르면 DAY 1이 열립니다. 단어 → Part 5 → Part 6 → Part 7 → 오답 복습 순서로 공부합니다.</li>' +
+        '<li>문제를 틀리면 <b>왜 틀렸는지(오답 원인)</b>를 골라 주세요. 취약 영역 분석이 정확해집니다.</li>' +
+        '<li>틀린 문제는 <b>오답노트</b>, 모르는 단어는 <b>Vocabulary</b>에 자동으로 모입니다. <b>학습분석</b>에서 약점과 다음 학습 추천을 확인하세요.</li>' +
+        '<li>기록은 이 브라우저에 자동 저장됩니다. 가끔 <b>설정 → 백업 파일 내려받기</b>로 백업해 두세요.</li>' +
+      '</ol>' +
+      '<div class="row-actions"><a class="btn btn-primary" href="#/day?day=1" data-action="onboarding-done">DAY 1 시작하기</a>' +
+      '<button type="button" class="btn" data-action="onboarding-done">안내 닫기</button></div>' +
+    '</section>';
+  }
+
+  // 오늘의 목표 (설정에서 바꿀 수 있음)
+  function renderTodayGoal(ctx) {
+    var settings = TM.settingsService.get(ctx.storage);
+    var goal = settings.dailyGoal;
+    var today = TM.settingsService.todayProgress(ctx.progress.getAttempts(), ctx.progress.getVocabState(), TM.date.toDateKey(new Date()));
+    function row(label, done, target, unit) {
+      var reached = done >= target;
+      return '<div class="goal-row"><span class="goal-name">' + label + '</span>' +
+        TM.components.renderMeter({ value: (done / target) * 100, label: '오늘 ' + label + ' 목표 달성률' }) +
+        '<span class="goal-num">' + done + ' / ' + target + unit + (reached ? ' ✓' : '') + '</span></div>';
+    }
+    return '<section class="card today-goal" aria-labelledby="goal-title">' +
+      '<div class="goal-head"><h2 id="goal-title">오늘의 목표</h2><a class="small" href="#/settings">목표 바꾸기</a></div>' +
+      row('문제', today.questions, goal.questions, '문제') + row('단어', today.words, goal.words, '개') +
+    '</section>';
+  }
+
   TM.pages.dashboard = {
     title: 'Dashboard',
     render: function (ctx) {
@@ -93,6 +125,8 @@
         return w ? { part: p, type: w.type, accuracy: w.accuracy } : null;
       }).filter(Boolean);
 
+      var onboarding = !TM.settingsService.get(ctx.storage).onboardingDone;
+
       var partCards = [5, 6, 7].map(function (p) {
         var part = stats.parts[p];
         return stat({
@@ -108,8 +142,11 @@
         '<header class="page-header"><h1>Dashboard</h1>' +
           '<p class="muted">DAY 1부터 매일 조금씩, 목표 ' + C.TARGET_SCORE + '점까지.</p></header>' +
 
+        (onboarding ? renderOnboarding() : '') +
         renderHero(stats, findResume(ctx)) +
-        renderInsights(stats) +
+        renderTodayGoal(ctx) +
+        (onboarding && stats.isEmpty ? '' : renderInsights(stats)) + // 처음 안내가 있으면 같은 내용의 환영 카드는 생략
+
 
         '<h2 class="section-title">학습 현황</h2>' +
         '<div class="stat-grid">' +
@@ -125,6 +162,16 @@
         '<h2 class="section-title">Part별 정답률</h2>' +
         '<div class="stat-grid part-grid">' + partCards + '</div>' +
       '</section>';
+    },
+    mount: function (root, ctx) {
+      function onClick(e) {
+        var el = e.target.closest('[data-action="onboarding-done"]');
+        if (!el) return;
+        TM.settingsService.update(ctx.storage, { onboardingDone: true });
+        if (e.target.tagName === 'BUTTON') ctx.router.refresh(); // 닫기: 환영 카드가 다시 보이도록 새로 그림
+      }
+      root.addEventListener('click', onClick);
+      return function () { root.removeEventListener('click', onClick); };
     }
   };
 })(window.TM = window.TM || {});

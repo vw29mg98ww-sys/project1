@@ -41,6 +41,8 @@
   }
 
   function bootstrap() {
+    // 저장된 화면 테마를 가장 먼저 적용한다 (화면이 깜빡이지 않도록)
+    TM.settingsService.applyTheme(TM.settingsService.get(TM.storage).theme);
     var layout = TM.components.createLayout(document.getElementById('app'));
     var outlet = layout.outlet;
 
@@ -64,6 +66,7 @@
     var cleanup = null;
 
     var currentPath = null;
+    var navigated = false;
     ctx.router = TM.router.createRouter({
       routes: TM.routes,
       defaultPath: '/dashboard',
@@ -76,6 +79,9 @@
         layout.setActive(page.menuPathFor ? page.menuPathFor(ctx, route.params) : (page.menuPath || route.path));
         document.title = page.title + ' · ' + TM.constants.APP_NAME;
         window.scrollTo(0, 0);
+        // 화면이 바뀌면 키보드·화면 낭독기 초점을 본문으로 옮긴다 (처음 열 때는 제외)
+        if (navigated) outlet.focus({ preventScroll: true });
+        navigated = true;
       }
     });
 

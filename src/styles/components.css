@@ -553,3 +553,37 @@
 @media (prefers-reduced-motion: reduce) { .meter > span { transition: none; } }
 .more-types { margin-top: 6px; }
 .more-types > summary { cursor: pointer; color: var(--color-primary); font-weight: 600; font-size: .9rem; padding: 6px 4px; }
+
+/* ───────── STEP 10: 설정·안내·접근성 ───────── */
+.radio-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.radio-chip { position: relative; cursor: pointer; }
+.radio-chip input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.radio-chip span { display: inline-block; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-weight: 600; font-size: .9rem; }
+.radio-chip input:checked + span { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+.radio-chip input:focus-visible + span { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.goal-field { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.goal-label { font-weight: 700; min-width: 2.5em; }
+.confirm-box { padding: 14px; border-radius: var(--radius-md); background: var(--color-danger-soft); border: 1px solid var(--color-danger); }
+.confirm-box p { margin: 0 0 10px; }
+.btn-danger-solid { background: var(--color-danger); border-color: var(--color-danger); color: var(--color-on-status); }
+
+.onboarding { margin-bottom: 16px; border: 2px solid var(--color-primary); }
+.onboarding h2 { font-size: 1.1rem; margin-bottom: 8px; }
+.onb-steps { margin: 0 0 14px; padding-left: 22px; display: grid; gap: 6px; }
+
+.today-goal { margin-bottom: 16px; }
+.goal-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.goal-head h2 { font-size: 1.05rem; }
+.goal-row { display: grid; grid-template-columns: 3em 1fr auto; align-items: center; gap: 12px; padding: 4px 0; }
+.goal-name { font-weight: 600; }
+.goal-num { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+
+.skip-link { position: absolute; left: 12px; top: -48px; z-index: 100; padding: 8px 14px; border-radius: var(--radius-sm); background: var(--color-primary); color: var(--color-on-primary); font-weight: 700; text-decoration: none; }
+.skip-link:focus { top: 8px; }
+
+/* 지문 접기/펼치기: 제목 줄을 누르면 접힌다 */
+.passage-summary { display: flex; justify-content: space-between; align-items: center; cursor: pointer; list-style: none; font-family: var(--font-sans); font-weight: 700; font-size: .85rem; color: var(--color-muted); margin-bottom: 10px; }
+.passage-summary::-webkit-details-marker { display: none; }
+.passage-summary::after { content: '접기 ▲'; font-weight: 600; font-size: .8rem; color: var(--color-primary); }
+details.passage:not([open]) .passage-summary { margin-bottom: 0; }
+details.passage:not([open]) .passage-summary::after { content: '펼치기 ▼'; }

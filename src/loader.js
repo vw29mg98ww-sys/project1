@@ -31,6 +31,7 @@
     'src/services/wrongNoteService.js',
     'src/services/analyticsService.js',
     'src/services/analysisService.js',
+    'src/services/settingsService.js',
     'src/components/Layout.js',
     'src/components/Placeholder.js',
     'src/components/StatCard.js',

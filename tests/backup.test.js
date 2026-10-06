@@ -2,16 +2,24 @@
 
 function freshStorage() { return TM.createStorage(TM.createMemoryBackend()); }
 
-test('저장 공간 사용량을 계산한다', function () {
+test('저장 공간 사용량을 글자 수로 계산한다 (브라우저 한도 기준)', function () {
   var s = freshStorage();
-  assert.equal(s.usage().bytes, 0);
+  assert.equal(s.usage().chars, 0);
   s.set('attempts', [{ a: 1 }]);
   var u1 = s.usage();
-  assert.ok(u1.bytes > 0);
+  var raw = TM.STORAGE_NAMESPACE + 'attempts' + JSON.stringify({ v: s.SCHEMA_VERSION, savedAt: 'x', data: [{ a: 1 }] });
+  assert.ok(Math.abs(u1.chars - raw.length) <= 30, '저장된 글자 수와 같아야 함');
   assert.ok(u1.byKey.attempts > 0);
   s.set('attempts', [{ a: 1 }, { a: 2 }, { a: 3 }]);
-  assert.ok(s.usage().bytes > u1.bytes);
-  assert.equal(u1.quotaBytes, 5 * 1024 * 1024);
+  assert.ok(s.usage().chars > u1.chars);
+  assert.equal(u1.quotaChars, 5000000);
+});
+
+test('남은 저장 공간으로 풀이 기록을 몇 건 더 저장할 수 있는지 계산', function () {
+  var cap = TM.settingsService.capacity({ chars: 2300000, quotaChars: 5000000, byKey: { attempts: 2300000 } }, 10000);
+  assert.equal(cap.perAttempt, 230);
+  assert.equal(cap.remainingAttempts, 11739);
+  assert.equal(TM.settingsService.capacity({ chars: 0, quotaChars: 5000000, byKey: {} }, 0).remainingAttempts, 21739, '기록이 없으면 1건 230글자로 추정');
 });
 
 test('저장에 실패하면 등록한 알림 함수가 호출된다', function () {
