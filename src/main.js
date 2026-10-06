@@ -28,7 +28,7 @@
     }
     if (content.warnings.length) console.warn('데이터 경고:\n' + content.warnings.join('\n'));
 
-    var ctx = { content: content, storage: TM.storage };
+    var ctx = { content: content, storage: TM.storage, progress: TM.progress };
     var cleanup = null;
 
     ctx.router = TM.router.createRouter({

@@ -55,15 +55,16 @@
     // DAY 하나에 배정하는 기본 학습량
     DAILY_PLAN: { vocabulary: 20, part5: 10, part6: 5, part7: 5 },
 
+    // 오답 원인. short는 '현재 가장 취약한 영역은 ○○입니다' 문장에 쓰는 짧은 이름
     WRONG_REASONS: [
-      { id: 'vocabulary', label: '어휘 부족' },
-      { id: 'grammar', label: '문법' },
-      { id: 'structure', label: '문장 구조' },
-      { id: 'long_sentence', label: '긴 문장 해석' },
-      { id: 'question_understanding', label: '문제 질문 이해' },
-      { id: 'passage_understanding', label: '지문 내용 이해' },
-      { id: 'inference', label: '추론' },
-      { id: 'careless', label: '단순 실수' }
+      { id: 'vocabulary', label: '어휘 부족', short: '어휘' },
+      { id: 'grammar', label: '문법', short: '문법' },
+      { id: 'structure', label: '문장 구조', short: '문장 구조' },
+      { id: 'long_sentence', label: '긴 문장 해석', short: '긴 문장 해석' },
+      { id: 'question_understanding', label: '문제 질문 이해', short: '질문 이해' },
+      { id: 'passage_understanding', label: '지문 내용 이해', short: '지문 이해' },
+      { id: 'inference', label: '추론', short: '추론' },
+      { id: 'careless', label: '단순 실수', short: '실수 관리' }
     ],
 
     // 단어 학습 상태
@@ -73,6 +74,20 @@
       KNOWN: { id: 'known', label: '알고 있음' }
     },
 
-    CHOICE_LETTERS: ['A', 'B', 'C', 'D']
+    CHOICE_LETTERS: ['A', 'B', 'C', 'D'],
+
+    // 예상 점수 계산 기준
+    SCORE: {
+      MIN_ATTEMPTS: 20,       // 이만큼 풀어야 예상 점수를 보여준다
+      RECENT_WINDOW: 100,     // 최근 몇 문제로 계산할지
+      // 실제 RC 100문항 중 Part별 비중 (Part 5: 30, Part 6: 16, Part 7: 54)
+      PART_WEIGHTS: { 5: 30, 6: 16, 7: 54 }
+    },
+
+    // 오답 원인 분석 기준
+    WEAKNESS: {
+      RECENT_WINDOW: 50,      // 최근 몇 문제를 볼지
+      MIN_TAGGED: 5           // 오답 원인이 이만큼 쌓여야 분석 문장을 보여준다
+    }
   };
 })(window.TM = window.TM || {});

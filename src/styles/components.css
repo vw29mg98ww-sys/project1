@@ -24,20 +24,54 @@
 .btn-primary:hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); }
 .btn-lg { padding: 14px 28px; font-size: 1.05rem; }
 
-/* Dashboard 상단 */
+/* 진행 막대: 채움은 강조색, 빈 부분은 같은 색의 옅은 단계 */
+.meter { height: 8px; border-radius: 999px; background: var(--color-primary-soft); overflow: hidden; }
+.meter > span { display: block; height: 100%; border-radius: 999px; background: var(--color-primary); transition: width .3s ease; }
+
+/* Dashboard 상단: 예상 점수(화면의 대표 숫자) + 오늘의 학습 시작 */
 .hero {
-  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-  background: linear-gradient(135deg, var(--color-primary-soft), var(--color-surface));
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  margin-bottom: 16px;
 }
+.hero-main { flex: 1 1 320px; min-width: 0; }
 .hero-label { color: var(--color-muted); font-size: .9rem; }
-.hero-score { font-size: 2.6rem; font-weight: 800; color: var(--color-primary); line-height: 1.1; }
+.hero-figure { font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin: 2px 0 12px; }
+.hero-target { font-size: 1.1rem; font-weight: 600; color: var(--color-muted); }
+.hero-figure-empty { font-size: 1.6rem; color: var(--color-muted); }
+.hero-note { margin: 10px 0 2px; font-weight: 600; }
+.hero-action { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 0 0 auto; text-align: center; }
+@media (max-width: 599px) {
+  .hero-action { width: 100%; }
+  .hero-action .btn { width: 100%; }
+}
+
+/* 학습 진단 */
+.insight-card { margin-bottom: 8px; }
+.insight-title { font-size: 1.05rem; margin-bottom: 10px; }
+.insight-card p { margin: 6px 0; }
+.insight-list { list-style: none; margin: 0 0 6px; padding: 0; }
+.insight { padding: 6px 0 6px 26px; position: relative; }
+.insight::before { position: absolute; left: 0; top: 6px; }
+.insight-focus { font-weight: 700; }
+.insight-focus::before { content: '🎯'; }
+.insight-info::before { content: '💡'; }
+.reason-list { margin-top: 12px; border-top: 1px solid var(--color-border); padding-top: 12px; }
+.reason-row { display: grid; grid-template-columns: 7.5em 1fr 3em; align-items: center; gap: 10px; margin-bottom: 8px; font-size: .9rem; }
+.reason-value { text-align: right; font-variant-numeric: tabular-nums; color: var(--color-muted); }
 
 /* 통계 카드 */
 .stat-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
 .stat-card { padding: 16px; }
 .stat-label { color: var(--color-muted); font-size: .85rem; }
-.stat-value { font-size: 1.4rem; font-weight: 800; margin-top: 2px; }
+.stat-value { font-size: 1.5rem; font-weight: 700; margin-top: 2px; }
+.stat-unit { font-size: .9rem; font-weight: 600; color: var(--color-muted); margin-left: 2px; }
 .stat-sub { color: var(--color-muted); font-size: .8rem; margin-top: 2px; }
+.stat-card .meter { margin-top: 10px; }
+.part-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+@media (max-width: 599px) {
+  .stat-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .part-grid { grid-template-columns: 1fr; }
+}
 
 /* 배지·칩 */
 .badge {

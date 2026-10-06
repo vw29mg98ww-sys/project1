@@ -25,6 +25,7 @@ Node.js, npm, 서버 등 **따로 설치할 것이 없습니다.** 인터넷 연
 ```
 index.html              앱 시작 파일 (더블클릭해서 실행)
 src/
+  loader.js             불러올 스크립트 목록 (새 파일을 만들면 여기에 추가)
   main.js               앱 시작: 화면 틀 생성 → 데이터 로드 → 메뉴 이동 연결
   constants.js          메뉴, Part 정보, 문제 유형, 난이도, 오답 원인 등 공통 설정
   components/           여러 화면에서 함께 쓰는 화면 조각 (레이아웃, 카드 등)
@@ -33,7 +34,12 @@ src/
   data/
     questions.js        문제·지문 데이터
     vocabulary.js       단어 데이터
-  services/             데이터를 불러와 화면에서 쓰기 좋게 정리
+  services/
+    dataService.js      문제·단어 데이터를 불러와 DAY·Part별로 정리
+    progressService.js  학습 기록 읽기/쓰기 (풀이 기록, 학습 날짜, 단어 상태)
+    statsService.js     학습 기록 → Dashboard 통계 계산
+    scoreService.js     예상 점수 계산
+    insightService.js   학습 진단 문장 (나중에 AI 분석으로 교체·확장 가능)
   storage/              학습 기록 저장 (localStorage). 저장 방식이 바뀌면 이 폴더만 수정
   utils/                작은 도구 (주소 처리, 데이터 검사, HTML 처리)
   styles/               디자인 (색상 변수, 기본, 레이아웃, 컴포넌트)
@@ -111,6 +117,12 @@ tests/
 
 데이터에 실수가 있으면(쉼표 누락, 정답 형식 오류 등) 앱을 열었을 때 **어느 문제의 어떤 항목이 잘못됐는지** 화면에 표시됩니다.
 
+## 예상 점수는 어떻게 계산되나요?
+
+- 최근 100문제(최소 20문제)의 Part별 정답률을 실제 RC 구성 비중(Part 5 : 6 : 7 = 30 : 16 : 54)으로 평균합니다.
+- 그 정답률을 RC 점수(5~495점)로 환산하고, LC도 같은 수준이라고 가정해 2배 한 값이 총점입니다.
+- 공식 환산표가 아닌 **학습용 추정치**입니다. 계산 방식은 `src/services/scoreService.js`에서 바꿀 수 있습니다.
+
 ## 저작권 안내
 
 실제 TOEIC 기출문제를 무단으로 복제·크롤링하지 않습니다. 기본 문제는 모두 자체 제작한 TOEIC 스타일 문제이며,
@@ -119,7 +131,7 @@ tests/
 ## 개발 진행 상황
 
 - [x] STEP 1 프로젝트 구조 생성
-- [ ] STEP 2 Dashboard
+- [x] STEP 2 Dashboard
 - [ ] STEP 3 DAY 시스템
 - [ ] STEP 4 문제 풀이 시스템
 - [ ] STEP 5 학습 기록 저장

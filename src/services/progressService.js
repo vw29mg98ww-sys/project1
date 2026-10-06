@@ -1,0 +1,91 @@
+// 학습 기록 읽기/쓰기. 화면은 저장소를 직접 만지지 않고 이 서비스를 통해 기록을 다룬다.
+//
+// [저장 형식]
+// profile     : { currentDay: 1, startedAt: '2026-10-06', studyDates: ['2026-10-06', ...] }
+// attempts    : 문제를 풀 때마다 하나씩 쌓이는 기록(시간 순서)
+//   { id, question_id, day, part, question_type, difficulty,
+//     selected: 'B', correct_answer: 'C', is_correct: false,
+//     time_ms: 41200, wrong_reason: 'vocabulary' | null, answered_at: ISO 시각 }
+// vocabState  : { 'implement': { status: 'unknown' | 'confused' | 'known', updatedAt, reviewCount } }
+(function (TM) {
+  'use strict';
+
+  function defaultProfile() {
+    return { currentDay: 1, startedAt: null, studyDates: [] };
+  }
+
+  // storage: TM.createStorage()로 만든 저장소, options.now: 현재 시각 함수(테스트용)
+  TM.createProgressService = function (storage, options) {
+    var K = TM.KEYS;
+    var now = (options && options.now) || function () { return new Date(); };
+
+    function getProfile() {
+      return Object.assign(defaultProfile(), storage.get(K.PROFILE, {}));
+    }
+
+    function markStudied() {
+      var today = TM.date.toDateKey(now());
+      return storage.update(K.PROFILE, function (saved) {
+        var profile = Object.assign(defaultProfile(), saved || {});
+        if (!profile.startedAt) profile.startedAt = today;
+        if (profile.studyDates.indexOf(today) < 0) {
+          profile.studyDates = profile.studyDates.concat(today).sort();
+        }
+        return profile;
+      }, null);
+    }
+
+    return {
+      getProfile: getProfile,
+      getAttempts: function () { return storage.get(K.ATTEMPTS, []); },
+      getVocabState: function () { return storage.get(K.VOCAB_STATE, {}); },
+      markStudied: markStudied,
+
+      // 문제 풀이 결과 저장. question: 문제 데이터, selected: 'A'~'D', timeMs: 풀이 시간
+      recordAttempt: function (question, selected, timeMs) {
+        var time = now();
+        var record = {
+          id: time.getTime().toString(36) + Math.random().toString(36).slice(2, 6),
+          question_id: question.question_id,
+          day: question.day,
+          part: question.part,
+          question_type: question.question_type || null,
+          difficulty: question.difficulty,
+          selected: selected,
+          correct_answer: question.correct_answer,
+          is_correct: selected === question.correct_answer,
+          time_ms: Math.max(0, Math.round(timeMs || 0)),
+          wrong_reason: null,
+          answered_at: time.toISOString()
+        };
+        storage.update(K.ATTEMPTS, function (list) { return list.concat(record); }, []);
+        markStudied();
+        return record;
+      },
+
+      setWrongReason: function (attemptId, reasonId) {
+        storage.update(K.ATTEMPTS, function (list) {
+          return list.map(function (a) { return a.id === attemptId ? Object.assign({}, a, { wrong_reason: reasonId }) : a; });
+        }, []);
+      },
+
+      setVocabStatus: function (word, status) {
+        var key = String(word).toLowerCase();
+        storage.update(K.VOCAB_STATE, function (state) {
+          var prev = state[key] || { reviewCount: 0 };
+          state[key] = { status: status, updatedAt: now().toISOString(), reviewCount: prev.reviewCount + 1 };
+          return state;
+        }, {});
+        markStudied();
+      },
+
+      setCurrentDay: function (day) {
+        storage.update(K.PROFILE, function (saved) {
+          return Object.assign(defaultProfile(), saved || {}, { currentDay: day });
+        }, null);
+      }
+    };
+  };
+
+  TM.progress = TM.createProgressService(TM.storage);
+})(window.TM = window.TM || {});

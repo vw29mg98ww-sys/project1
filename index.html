@@ -19,31 +19,8 @@
     </div>
   </div>
 
-  <!--
-    설치 없이 이 파일을 더블클릭해서 열 수 있도록 일반 <script>로 불러온다.
-    순서가 중요하다: 데이터 → 상수 → 유틸 → 저장소 → 서비스 → 컴포넌트 → 화면 → 경로표 → 시작
-  -->
-  <script src="src/data/questions.js"></script>
-  <script src="src/data/vocabulary.js"></script>
-  <script src="src/constants.js"></script>
-  <script src="src/utils/dom.js"></script>
-  <script src="src/utils/router.js"></script>
-  <script src="src/utils/validateData.js"></script>
-  <script src="src/storage/keys.js"></script>
-  <script src="src/storage/storage.js"></script>
-  <script src="src/services/dataService.js"></script>
-  <script src="src/components/Layout.js"></script>
-  <script src="src/components/Placeholder.js"></script>
-  <script src="src/components/StatCard.js"></script>
-  <script src="src/pages/DashboardPage.js"></script>
-  <script src="src/pages/DayPage.js"></script>
-  <script src="src/pages/PartPage.js"></script>
-  <script src="src/pages/VocabularyPage.js"></script>
-  <script src="src/pages/WrongNotesPage.js"></script>
-  <script src="src/pages/AnalyticsPage.js"></script>
-  <script src="src/pages/SettingsPage.js"></script>
-  <script src="src/pages/NotFoundPage.js"></script>
-  <script src="src/pages/index.js"></script>
+  <!-- 설치 없이 이 파일을 더블클릭해서 열 수 있도록 일반 스크립트로 불러온다. 파일 목록은 src/loader.js에 있다. -->
+  <script src="src/loader.js"></script>
   <script src="src/main.js"></script>
 </body>
 </html>

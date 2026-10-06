@@ -15,7 +15,8 @@ test('모든 메뉴 항목에 연결된 화면이 있다', function () {
 
 test('모든 화면이 오류 없이 그려진다', function () {
   var content = TM.dataService.buildContent(TM_DATA.questions, TM_DATA.vocabulary);
-  var ctx = { content: content, storage: TM.createStorage(TM.createMemoryBackend()) };
+  var storage = TM.createStorage(TM.createMemoryBackend());
+  var ctx = { content: content, storage: storage, progress: TM.createProgressService(storage) };
   Object.keys(TM.routes).forEach(function (path) {
     var html = TM.routes[path].render(ctx, {});
     assert.ok(typeof html === 'string' && html.length > 0, path + ' 화면이 비어 있습니다');

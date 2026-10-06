@@ -15,32 +15,14 @@
   <!-- 이 파일을 브라우저로 열면 자동 테스트가 실행된다. 앱 코드를 바꾼 뒤 기존 기능이 깨지지 않았는지 확인하는 용도. -->
   <div id="results">테스트 실행 중…</div>
 
-  <script src="../src/data/questions.js"></script>
-  <script src="../src/data/vocabulary.js"></script>
-  <script src="../src/constants.js"></script>
-  <script src="../src/utils/dom.js"></script>
-  <script src="../src/utils/router.js"></script>
-  <script src="../src/utils/validateData.js"></script>
-  <script src="../src/storage/keys.js"></script>
-  <script src="../src/storage/storage.js"></script>
-  <script src="../src/services/dataService.js"></script>
-  <script src="../src/components/Layout.js"></script>
-  <script src="../src/components/Placeholder.js"></script>
-  <script src="../src/components/StatCard.js"></script>
-  <script src="../src/pages/DashboardPage.js"></script>
-  <script src="../src/pages/DayPage.js"></script>
-  <script src="../src/pages/PartPage.js"></script>
-  <script src="../src/pages/VocabularyPage.js"></script>
-  <script src="../src/pages/WrongNotesPage.js"></script>
-  <script src="../src/pages/AnalyticsPage.js"></script>
-  <script src="../src/pages/SettingsPage.js"></script>
-  <script src="../src/pages/NotFoundPage.js"></script>
-  <script src="../src/pages/index.js"></script>
+  <!-- 앱과 같은 스크립트 목록(src/loader.js)을 불러온다 -->
+  <script src="../src/loader.js" data-base="../"></script>
 
   <script src="test-runner.js"></script>
   <script src="data.test.js"></script>
   <script src="storage.test.js"></script>
   <script src="router.test.js"></script>
+  <script src="dashboard.test.js"></script>
   <script>runTests();</script>
 </body>
 </html>
