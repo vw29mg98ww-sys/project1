@@ -1,0 +1,53 @@
+/* 디자인 토큰: 색상·간격·모서리. 테마를 바꿀 때는 이 파일만 수정한다. */
+:root {
+  --color-bg: #f5f6fa;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0f2f8;
+  --color-text: #1b1f2e;
+  --color-muted: #6b7189;
+  --color-border: #e2e5ef;
+  --color-primary: #3d5afe;
+  --color-primary-hover: #2f49e0;
+  --color-primary-soft: #e9edff;
+  --color-on-primary: #ffffff;
+  --color-success: #2e7d32;
+  --color-success-soft: #e7f5e9;
+  --color-danger: #c62828;
+  --color-danger-soft: #fdecec;
+  --color-warning: #b26a00;
+  --color-warning-soft: #fff4e0;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(20, 24, 40, .06);
+
+  --topbar-height: 56px;
+  --sidebar-width: 220px;
+  --content-max: 1080px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  --font-reading: Georgia, "Times New Roman", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #12141b;
+    --color-surface: #1b1e28;
+    --color-surface-2: #232734;
+    --color-text: #e7e9f0;
+    --color-muted: #9aa0b6;
+    --color-border: #2f3445;
+    --color-primary: #7d93ff;
+    --color-primary-hover: #95a6ff;
+    --color-primary-soft: #252c4a;
+    --color-on-primary: #0d1022;
+    --color-success: #74d680;
+    --color-success-soft: #1d3223;
+    --color-danger: #ff8a80;
+    --color-danger-soft: #3a2224;
+    --color-warning: #ffb74d;
+    --color-warning-soft: #3a2e1a;
+    --shadow-sm: none;
+  }
+}

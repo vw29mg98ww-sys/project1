@@ -3,20 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TOEIC RC 트레이너</title>
-  <link rel="stylesheet" href="style.css">
+  <title>TOEIC 900 MASTER</title>
+  <link rel="stylesheet" href="src/styles/variables.css">
+  <link rel="stylesheet" href="src/styles/base.css">
+  <link rel="stylesheet" href="src/styles/layout.css">
+  <link rel="stylesheet" href="src/styles/components.css">
 </head>
 <body>
-  <header class="topbar">
-    <button class="brand" data-action="home">TOEIC RC 트레이너</button>
-    <nav>
-      <button data-action="home">홈</button>
-      <button data-action="review">오답노트</button>
-      <button data-action="vocab">단어장</button>
-    </nav>
-  </header>
-  <main id="app"></main>
-  <script src="data/questions.js"></script>
-  <script src="app.js"></script>
+  <div id="app">
+    <!-- 스크립트가 실행되면 이 안내문은 앱 화면으로 바뀐다 -->
+    <div class="boot-message">
+      <h1>TOEIC 900 MASTER</h1>
+      <p>앱을 불러오는 중입니다…</p>
+      <p class="muted">이 문구가 계속 보이면 브라우저에서 JavaScript가 꺼져 있는지 확인하세요.</p>
+    </div>
+  </div>
+
+  <!--
+    설치 없이 이 파일을 더블클릭해서 열 수 있도록 일반 <script>로 불러온다.
+    순서가 중요하다: 데이터 → 상수 → 유틸 → 저장소 → 서비스 → 컴포넌트 → 화면 → 경로표 → 시작
+  -->
+  <script src="src/data/questions.js"></script>
+  <script src="src/data/vocabulary.js"></script>
+  <script src="src/constants.js"></script>
+  <script src="src/utils/dom.js"></script>
+  <script src="src/utils/router.js"></script>
+  <script src="src/utils/validateData.js"></script>
+  <script src="src/storage/keys.js"></script>
+  <script src="src/storage/storage.js"></script>
+  <script src="src/services/dataService.js"></script>
+  <script src="src/components/Layout.js"></script>
+  <script src="src/components/Placeholder.js"></script>
+  <script src="src/components/StatCard.js"></script>
+  <script src="src/pages/DashboardPage.js"></script>
+  <script src="src/pages/DayPage.js"></script>
+  <script src="src/pages/PartPage.js"></script>
+  <script src="src/pages/VocabularyPage.js"></script>
+  <script src="src/pages/WrongNotesPage.js"></script>
+  <script src="src/pages/AnalyticsPage.js"></script>
+  <script src="src/pages/SettingsPage.js"></script>
+  <script src="src/pages/NotFoundPage.js"></script>
+  <script src="src/pages/index.js"></script>
+  <script src="src/main.js"></script>
 </body>
 </html>

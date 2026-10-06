@@ -1,0 +1,14 @@
+// 저장소 키 목록. 모든 학습 데이터는 이 키들로만 저장한다.
+// 새 데이터를 저장할 때는 여기에 키를 추가하고 TM.storage의 get/set을 쓴다.
+(function (TM) {
+  'use strict';
+
+  TM.KEYS = {
+    PROFILE: 'profile',               // 학습 시작일, 현재 DAY, 연속 학습일
+    DAY_PROGRESS: 'dayProgress',      // DAY별 진행률
+    ATTEMPTS: 'attempts',             // 문제별 풀이 기록(선택한 답, 정답 여부, 풀이 시간, 오답 원인)
+    VOCAB_STATE: 'vocabState',        // 단어별 학습 상태
+    LAST_POSITION: 'lastPosition',    // 마지막으로 풀던 위치
+    SETTINGS: 'settings'
+  };
+})(window.TM = window.TM || {});

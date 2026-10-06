@@ -1,0 +1,67 @@
+/* 상단 바 */
+.topbar {
+  position: sticky; top: 0; z-index: 30;
+  height: var(--topbar-height);
+  display: flex; align-items: center; gap: 12px;
+  padding: 0 16px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+.brand {
+  font-weight: 800; letter-spacing: .02em; font-size: 1.05rem;
+  color: var(--color-primary); text-decoration: none;
+}
+
+/* 햄버거 버튼: 모바일에서만 보인다 */
+.icon-button {
+  display: inline-flex; flex-direction: column; justify-content: center; gap: 4px;
+  width: 40px; height: 40px; padding: 0 9px;
+  background: none; border: 0; border-radius: var(--radius-sm); cursor: pointer;
+}
+.icon-button:hover { background: var(--color-surface-2); }
+.menu-toggle span { display: block; height: 2px; background: var(--color-text); border-radius: 1px; }
+
+/* 사이드바 + 본문 */
+.shell { display: flex; min-height: calc(100vh - var(--topbar-height)); }
+.sidebar {
+  width: var(--sidebar-width); flex-shrink: 0;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  padding: 12px 8px;
+}
+.sidebar ul { list-style: none; margin: 0; padding: 0; position: sticky; top: calc(var(--topbar-height) + 12px); }
+.sidebar a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; margin-bottom: 2px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text); text-decoration: none; font-size: .95rem;
+}
+.sidebar a:hover { background: var(--color-surface-2); }
+.sidebar a.active { background: var(--color-primary-soft); color: var(--color-primary); font-weight: 700; }
+.nav-icon { width: 1.4em; text-align: center; }
+.backdrop { display: none; }
+
+.content { flex: 1; min-width: 0; padding: 24px 16px 64px; }
+.content:focus { outline: none; }
+.page { max-width: var(--content-max); margin: 0 auto; }
+
+@media (min-width: 900px) {
+  .menu-toggle { display: none; }
+  .content { padding: 32px 32px 64px; }
+}
+
+@media (max-width: 899px) {
+  .sidebar {
+    position: fixed; z-index: 40;
+    top: var(--topbar-height); bottom: 0; left: 0;
+    transform: translateX(-100%);
+    transition: transform .2s ease;
+    overflow-y: auto;
+  }
+  .sidebar ul { position: static; }
+  .sidebar.open { transform: translateX(0); box-shadow: 4px 0 24px rgba(0, 0, 0, .15); }
+  .backdrop:not([hidden]) {
+    display: block; position: fixed; inset: var(--topbar-height) 0 0 0; z-index: 35;
+    background: rgba(10, 12, 20, .35);
+  }
+}
