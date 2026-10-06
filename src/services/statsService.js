@@ -40,9 +40,9 @@
 
     var vocab = { known: 0, review: 0 };
     Object.keys(vocabState).forEach(function (w) {
-      var s = vocabState[w].status;
-      if (s === 'known') vocab.known++;
-      else if (s === 'unknown' || s === 'confused') vocab.review++;
+      var entry = vocabState[w];
+      if (entry.status === 'known') vocab.known++;
+      else if (entry.status === 'unknown' || entry.status === 'confused' || entry.needsReview) vocab.review++;
     });
 
     return {

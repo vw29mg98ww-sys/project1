@@ -32,5 +32,12 @@
     return streak;
   }
 
-  TM.date = { toDateKey: toDateKey, parseDateKey: parseDateKey, addDays: addDays, calcStreak: calcStreak };
+  // 41200(ms) → '0:41'
+  function formatDuration(ms) {
+    var total = Math.max(0, Math.round((ms || 0) / 1000));
+    var m = Math.floor(total / 60), sec = total % 60;
+    return m + ':' + pad(sec);
+  }
+
+  TM.date = { formatDuration: formatDuration, toDateKey: toDateKey, parseDateKey: parseDateKey, addDays: addDays, calcStreak: calcStreak };
 })(window.TM = window.TM || {});

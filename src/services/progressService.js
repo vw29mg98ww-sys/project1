@@ -6,7 +6,9 @@
 //   { id, question_id, day, part, question_type, difficulty,
 //     selected: 'B', correct_answer: 'C', is_correct: false,
 //     time_ms: 41200, wrong_reason: 'vocabulary' | null, answered_at: ISO 시각 }
-// vocabState  : { 'implement': { status: 'unknown' | 'confused' | 'known', updatedAt, reviewCount } }
+// vocabState  : { 'implement': { status: 'unknown' | 'confused' | 'known', updatedAt, reviewCount,
+//                                needsReview: true, wrongQuestions: ['d1-p5-03'] } }
+//   status는 사용자가 단어 학습에서 직접 고른 상태, needsReview는 관련 문제를 틀려서 자동 등록된 복습 표시
 // lastPosition: { day: 2, section: 'part6', index: 3, updatedAt } — 마지막으로 풀던 위치(index는 0부터)
 (function (TM) {
   'use strict';
@@ -73,11 +75,37 @@
       setVocabStatus: function (word, status) {
         var key = String(word).toLowerCase();
         storage.update(K.VOCAB_STATE, function (state) {
-          var prev = state[key] || { reviewCount: 0 };
-          state[key] = { status: status, updatedAt: now().toISOString(), reviewCount: prev.reviewCount + 1 };
+          var prev = state[key] || {};
+          state[key] = Object.assign({}, prev, {
+            status: status,
+            updatedAt: now().toISOString(),
+            reviewCount: (prev.reviewCount || 0) + 1,
+            needsReview: status === 'known' ? false : !!prev.needsReview
+          });
           return state;
         }, {});
         markStudied();
+      },
+
+      // 문제를 틀렸을 때 관련 단어를 복습 단어로 등록한다 (이미 '알고 있음'인 단어는 그대로 둔다)
+      flagWordsForReview: function (words, questionId) {
+        if (!words || !words.length) return [];
+        var flagged = [];
+        storage.update(K.VOCAB_STATE, function (state) {
+          words.forEach(function (word) {
+            var key = String(word).toLowerCase();
+            var prev = state[key] || {};
+            if (prev.status === 'known') return;
+            var list = prev.wrongQuestions || [];
+            state[key] = Object.assign({}, prev, {
+              needsReview: true,
+              wrongQuestions: list.indexOf(questionId) >= 0 ? list : list.concat(questionId)
+            });
+            flagged.push(word);
+          });
+          return state;
+        }, {});
+        return flagged;
       },
 
       getLastPosition: function () { return storage.get(K.LAST_POSITION, null); },

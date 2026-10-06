@@ -52,6 +52,13 @@
       if (!Array.isArray(q.choices) || q.choices.length !== 4) errors.push(where + ': choices(보기)는 4개여야 합니다');
       if (C.CHOICE_LETTERS.indexOf(q.correct_answer) < 0) errors.push(where + ': correct_answer는 "A"~"D" 중 하나여야 합니다');
       if (!q.explanation || !q.explanation.summary) errors.push(where + ': explanation.summary(해설)가 필요합니다');
+      var wrongChoices = q.explanation && q.explanation.wrong_choices;
+      if (wrongChoices) {
+        Object.keys(wrongChoices).forEach(function (letter) {
+          if (C.CHOICE_LETTERS.indexOf(letter) < 0) errors.push(where + ': wrong_choices의 키는 "A"~"D"여야 합니다 ("' + letter + '")');
+          else if (letter === q.correct_answer) errors.push(where + ': wrong_choices에 정답 ' + letter + '가 들어 있습니다');
+        });
+      }
 
       if (q.part === 6 || q.part === 7) {
         if (!q.passage_id) errors.push(where + ': Part ' + q.part + ' 문제에는 passage_id가 필요합니다');

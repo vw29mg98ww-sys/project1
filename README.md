@@ -41,6 +41,7 @@ src/
     scoreService.js     예상 점수 계산
     insightService.js   학습 진단 문장 (나중에 AI 분석으로 교체·확장 가능)
     dayService.js       DAY별 학습 구성·진행률·다음 학습·이어서 학습 판단
+    studyService.js     문제 풀이 세션: 몇 번째 문제부터 풀지, 결과 요약
   storage/              학습 기록 저장 (localStorage). 저장 방식이 바뀌면 이 폴더만 수정
   utils/                작은 도구 (주소 처리, 데이터 검사, HTML 처리)
   styles/               디자인 (색상 변수, 기본, 레이아웃, 컴포넌트)
@@ -67,7 +68,15 @@ tests/
   "choices": ["implement", "implemented", "implementing", "implementation"],
   "correct_answer": "B",
   "explanation": {
-    "summary": "be동사 뒤 수동태 자리이므로 과거분사 implemented가 정답입니다."
+    "summary": "be동사 뒤 수동태 자리이므로 과거분사 implemented가 정답입니다.",
+    "evidence": "will be 뒤 + 정책은 시행되는 대상 → 과거분사(수동태)",
+    "structure": "The new policy(주어) + will be implemented(수동태 동사) + next month",
+    "wrong_choices": {
+      "A": "implement는 동사원형이라 be 뒤에 올 수 없습니다.",
+      "C": "implementing은 능동이라 '정책이 시행한다'는 뜻이 됩니다.",
+      "D": "implementation은 명사라 '정책이 시행 그 자체다'가 되어 어색합니다."
+    },
+    "tip": "주어가 동작을 하는지(능동) 받는지(수동)부터 판단하세요."
   },
   "vocabulary": ["implement"],
   "grammar_point": "수동태",
@@ -85,7 +94,11 @@ tests/
 | `passage_id` | Part 6·7은 지문 번호, Part 5는 `null` |
 | `choices` | 보기 4개 |
 | `correct_answer` | `"A"` ~ `"D"` |
-| `explanation.summary` | 해설 (필수) |
+| `explanation.summary` | 간단한 해설 (필수). 정답일 때 보여줍니다 |
+| `explanation.evidence` | 정답 근거 (오답일 때 표시) |
+| `explanation.structure` | 문장 구조 분석 (오답일 때 표시) |
+| `explanation.wrong_choices` | 오답 보기별로 왜 틀렸는지. 키는 `"A"`~`"D"` (정답 제외) |
+| `explanation.tip` | 다음에 주의할 점 |
 | `vocabulary` | 관련 단어. `vocabulary.js`의 단어와 자동 연결됩니다 |
 | `question_type` | Part 5: 품사, 동사, 시제, 태, 수일치, 전치사, 접속사, 관계사, 비교, 수량 표현, 어휘, 어휘 collocation · Part 6: 문법, 어휘, 문맥, 문장 삽입 · Part 7: 세부 정보, 목적, 주제, 추론, NOT 문제, 동의어, 문장 의미, 정보 연결 |
 | `source` | 출처 (예: 자체 제작, 직접 입력한 교재 이름) |
@@ -118,6 +131,19 @@ tests/
 
 데이터에 실수가 있으면(쉼표 누락, 정답 형식 오류 등) 앱을 열었을 때 **어느 문제의 어떤 항목이 잘못됐는지** 화면에 표시됩니다.
 
+## 문제 풀이 방법
+
+1. DAY 화면에서 영역의 **시작** 버튼(또는 **이어서 학습**)을 누릅니다.
+2. 보기를 누르거나 키보드 **1~4 / A~D**로 답을 고르면 바로 채점됩니다.
+   - 정답: "정답입니다" + 간단한 해설
+   - 오답: "오답입니다" + 왜 틀렸는지 · 정답 근거 · 문장 구조 · 핵심 어휘 · 문제 유형 · 다음에 주의할 점
+3. 틀렸다면 **왜 틀렸는지(오답 원인)**를 골라 주세요. Dashboard의 취약 영역 분석에 쓰입니다.
+4. **다음 문제**(또는 Enter)로 넘어갑니다. 마지막 문제 뒤에는 결과 요약과 다음 학습 안내가 나옵니다.
+
+- 선택한 답, 정답 여부, 풀이 시간(다른 탭을 보는 시간 제외), 오답 원인이 자동 저장됩니다.
+- 틀린 문제의 핵심 어휘는 자동으로 **복습 단어**에 등록됩니다.
+- 중간에 브라우저를 닫아도 다음에 **이어서 학습**을 누르면 풀던 곳부터 계속합니다.
+
 ## DAY 진행률은 어떻게 계산되나요?
 
 - 하루 학습: Vocabulary → Part 5 → Part 6 → Part 7 → 오답 복습
@@ -142,7 +168,7 @@ tests/
 - [x] STEP 1 프로젝트 구조 생성
 - [x] STEP 2 Dashboard
 - [x] STEP 3 DAY 시스템
-- [ ] STEP 4 문제 풀이 시스템
+- [x] STEP 4 문제 풀이 시스템
 - [ ] STEP 5 학습 기록 저장
 - [ ] STEP 6 Part 5 / 6 / 7
 - [ ] STEP 7 Vocabulary

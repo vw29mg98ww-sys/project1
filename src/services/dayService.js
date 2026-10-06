@@ -2,7 +2,8 @@
 // 화면과 분리된 순수 계산 함수라 테스트하기 쉽다.
 //
 // [진행률 기준]
-// - Vocabulary: 그 DAY 단어 중 학습 상태(모름/헷갈림/알고 있음)를 표시한 단어 수
+// - Vocabulary: 그 DAY 단어 중 학습 상태(모름/헷갈림/알고 있음)를 직접 표시한 단어 수
+//   (문제를 틀려 자동으로 복습 등록된 단어는 학습한 것으로 세지 않는다)
 // - Part 5/6/7: 그 DAY 문제 중 한 번 이상 푼 문제 수
 // - 오답 복습: 그 DAY 문제 중 처음 풀 때 틀린 문제를, 그 뒤에 다시 풀었는지
 // 분모는 권장 학습량이 아니라 그 DAY에 실제로 등록된 문제·단어 수다.
@@ -57,7 +58,7 @@
       if (s.kind === 'vocab') {
         var words = content.getWords({ day: day });
         total = words.length;
-        done = words.filter(function (w) { return vocabState[w.word.toLowerCase()]; }).length;
+        done = words.filter(function (w) { var e = vocabState[w.word.toLowerCase()]; return !!(e && e.status); }).length;
       } else if (s.kind === 'question') {
         var qs = content.getQuestions({ day: day, part: s.part });
         total = qs.length;

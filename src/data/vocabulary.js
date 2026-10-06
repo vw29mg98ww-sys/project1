@@ -273,6 +273,375 @@ window.TM_DATA.vocabulary = {
       "day": 2,
       "difficulty": 2,
       "source": "자체 제작"
+    },
+    {
+      "word": "introduce",
+      "meaning": "소개하다, 도입하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The company will introduce a new product line.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "trade show",
+      "meaning": "무역 박람회",
+      "part_of_speech": "n.",
+      "example_sentence": "We met several new clients at the trade show.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "expense report",
+      "meaning": "경비 보고서",
+      "part_of_speech": "n.",
+      "example_sentence": "Please attach receipts to your expense report.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "as scheduled",
+      "meaning": "예정대로",
+      "part_of_speech": "phr.",
+      "example_sentence": "The event will be held as scheduled.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "submission",
+      "meaning": "제출(물)",
+      "part_of_speech": "n.",
+      "example_sentence": "The deadline for submission is May 1.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "qualification",
+      "meaning": "자격, 자격 요건",
+      "part_of_speech": "n.",
+      "example_sentence": "She has excellent qualifications for the position.",
+      "day": 1,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "job description",
+      "meaning": "직무 기술서",
+      "part_of_speech": "n.",
+      "example_sentence": "Please read the job description carefully.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "previous",
+      "meaning": "이전의",
+      "part_of_speech": "adj.",
+      "example_sentence": "The previous manager retired last year.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "receipt",
+      "meaning": "영수증",
+      "part_of_speech": "n.",
+      "example_sentence": "Keep your receipt as proof of purchase.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "quarterly",
+      "meaning": "분기의",
+      "part_of_speech": "adj.",
+      "example_sentence": "The quarterly report will be released next week.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "available",
+      "meaning": "시간이 있는; 이용 가능한",
+      "part_of_speech": "adj.",
+      "example_sentence": "Ms. Han is not available for a meeting today.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "interrupt",
+      "meaning": "방해하다, 중단시키다",
+      "part_of_speech": "v.",
+      "example_sentence": "Construction will not interrupt our services.",
+      "day": 1,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "relocation",
+      "meaning": "이전, 이사",
+      "part_of_speech": "n.",
+      "example_sentence": "The office relocation is planned for May.",
+      "day": 1,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "belongings",
+      "meaning": "소지품",
+      "part_of_speech": "n.",
+      "example_sentence": "Please take all your belongings with you.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "extension",
+      "meaning": "내선 번호; 연장",
+      "part_of_speech": "n.",
+      "example_sentence": "Call me at extension 214.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "state-of-the-art",
+      "meaning": "최신식의",
+      "part_of_speech": "adj.",
+      "example_sentence": "The lab has state-of-the-art equipment.",
+      "day": 1,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "additional fee",
+      "meaning": "추가 요금",
+      "part_of_speech": "n.",
+      "example_sentence": "Delivery is available for an additional fee.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "portable",
+      "meaning": "휴대용의",
+      "part_of_speech": "adj.",
+      "example_sentence": "He brought a portable projector.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "replacement",
+      "meaning": "대체품, 후임자",
+      "part_of_speech": "n.",
+      "example_sentence": "We will send a replacement at no cost.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "application",
+      "meaning": "지원(서), 신청(서)",
+      "part_of_speech": "n.",
+      "example_sentence": "Applications must be submitted online.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "deadline",
+      "meaning": "마감일",
+      "part_of_speech": "n.",
+      "example_sentence": "The deadline has been extended to Friday.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "attached",
+      "meaning": "첨부된",
+      "part_of_speech": "adj.",
+      "example_sentence": "Please review the attached file.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "instructor",
+      "meaning": "강사",
+      "part_of_speech": "n.",
+      "example_sentence": "The instructor will hand out the materials.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "shipment",
+      "meaning": "배송(품), 선적",
+      "part_of_speech": "n.",
+      "example_sentence": "The shipment arrived two days late.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "warehouse",
+      "meaning": "창고",
+      "part_of_speech": "n.",
+      "example_sentence": "The items are stored in our warehouse.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "refrain from",
+      "meaning": "~을 삼가다",
+      "part_of_speech": "v.",
+      "example_sentence": "Please refrain from talking during the show.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "expand",
+      "meaning": "확장하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The firm plans to expand into Europe.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "operations",
+      "meaning": "사업, 운영",
+      "part_of_speech": "n.",
+      "example_sentence": "Our operations in Asia are growing.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "demand",
+      "meaning": "수요",
+      "part_of_speech": "n.",
+      "example_sentence": "Demand for electric cars is increasing.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "sell out",
+      "meaning": "매진되다",
+      "part_of_speech": "v.",
+      "example_sentence": "The tickets sold out in an hour.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "assign",
+      "meaning": "배정하다, 할당하다",
+      "part_of_speech": "v.",
+      "example_sentence": "Each team was assigned a project.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "thoroughly",
+      "meaning": "철저히",
+      "part_of_speech": "adv.",
+      "example_sentence": "The contract was reviewed thoroughly.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "shareholder",
+      "meaning": "주주",
+      "part_of_speech": "n.",
+      "example_sentence": "The shareholders approved the merger.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "promote",
+      "meaning": "승진시키다; 홍보하다",
+      "part_of_speech": "v.",
+      "example_sentence": "He was promoted to sales director.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "outstanding",
+      "meaning": "뛰어난; 미지불된",
+      "part_of_speech": "adj.",
+      "example_sentence": "She received an award for outstanding service.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "extend",
+      "meaning": "연장하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The store extended its business hours.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "open house",
+      "meaning": "오픈 하우스, 공개 행사",
+      "part_of_speech": "n.",
+      "example_sentence": "Everyone is welcome at the open house.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "refreshments",
+      "meaning": "다과",
+      "part_of_speech": "n.",
+      "example_sentence": "Refreshments will be served after the talk.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "revised",
+      "meaning": "수정된",
+      "part_of_speech": "adj.",
+      "example_sentence": "Please send me the revised schedule.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
+    },
+    {
+      "word": "no later than",
+      "meaning": "늦어도 ~까지",
+      "part_of_speech": "phr.",
+      "example_sentence": "Reply no later than June 5.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "자체 제작"
+    },
+    {
+      "word": "distribute",
+      "meaning": "배포하다, 나눠 주다",
+      "part_of_speech": "v.",
+      "example_sentence": "Flyers will be distributed at the entrance.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "자체 제작"
     }
   ]
 };
