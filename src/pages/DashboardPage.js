@@ -87,6 +87,11 @@
         today: TM.date.toDateKey(new Date()),
         lastBackupAt: TM.backupService.lastBackupAt(ctx.storage)
       });
+      // Part별로 가장 약한 유형 (추천 학습 영역)
+      stats.weakTypes = [5, 6, 7].map(function (p) {
+        var w = TM.practiceService.weakTypes(TM.practiceService.typeStats(ctx.content, ctx.progress.getAttempts(), p))[0];
+        return w ? { part: p, type: w.type, accuracy: w.accuracy } : null;
+      }).filter(Boolean);
 
       var partCards = [5, 6, 7].map(function (p) {
         var part = stats.parts[p];

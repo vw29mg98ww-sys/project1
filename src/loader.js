@@ -23,6 +23,8 @@
     'src/services/statsService.js',
     'src/services/insightService.js',
     'src/services/dayService.js',
+    'src/services/difficultyService.js',
+    'src/services/practiceService.js',
     'src/services/studyService.js',
     'src/services/backupService.js',
     'src/components/Layout.js',

@@ -73,7 +73,7 @@
         outlet.innerHTML = page.render(ctx, route.params);
         cleanup = page.mount ? page.mount(outlet, ctx, route.params) : null;
         currentPath = route.path;
-        layout.setActive(page.menuPath || route.path);
+        layout.setActive(page.menuPathFor ? page.menuPathFor(ctx, route.params) : (page.menuPath || route.path));
         document.title = page.title + ' · ' + TM.constants.APP_NAME;
         window.scrollTo(0, 0);
       }

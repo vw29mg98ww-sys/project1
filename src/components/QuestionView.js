@@ -53,6 +53,16 @@
     }).join('') + '</ul>';
   }
 
+  // 문장 삽입 문제: 빈칸 앞 문장, 뒤 문장, 연결 단서
+  function renderContext(ctxInfo) {
+    if (!ctxInfo) return '';
+    return '<dl class="context-analysis">' +
+      '<dt>빈칸 앞</dt><dd>' + esc(ctxInfo.before) + '</dd>' +
+      '<dt>빈칸 뒤</dt><dd>' + esc(ctxInfo.after) + '</dd>' +
+      '<dt>연결 단서</dt><dd>' + esc(ctxInfo.clue) + '</dd>' +
+    '</dl>';
+  }
+
   function questionTypeText(question) {
     var C = TM.constants;
     var parts = [C.PARTS[question.part].name];
@@ -82,6 +92,7 @@
       return '<div class="feedback is-correct" role="status">' +
         '<div class="fb-head"><span class="fb-title">⭕ 정답입니다</span>' + time + '</div>' +
         '<p class="fb-summary">' + esc(ex.summary) + '</p>' +
+        detailRow('앞뒤 문맥', renderContext(ex.context_analysis)) +
         detailRow('핵심 어휘', renderKeyWords(question, content)) +
       '</div>';
     }
@@ -95,6 +106,7 @@
       '</div>' +
       detailRow('왜 틀렸는지', esc(why || '선택한 보기는 정답 근거와 맞지 않습니다. 아래 정답 근거를 확인하세요.')) +
       detailRow('정답 근거', esc(ex.evidence || ex.summary)) +
+      detailRow('앞뒤 문맥', renderContext(ex.context_analysis)) +
       detailRow('문장 구조', ex.structure ? esc(ex.structure) : '') +
       detailRow('핵심 어휘', renderKeyWords(question, content) +
         (flaggedWords && flaggedWords.length ? '<div class="muted small">→ 복습 단어로 등록했습니다</div>' : '')) +

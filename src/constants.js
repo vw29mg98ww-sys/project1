@@ -84,6 +84,12 @@
       PART_WEIGHTS: { 5: 30, 6: 16, 7: 54 }
     },
 
+    // 유형별 약점(추천 학습 영역) 기준: 이만큼 이상 풀었고 정답률이 기준 미만이면 추천
+    WEAK_TYPE: { MIN_ATTEMPTS: 3, THRESHOLD: 70 },
+
+    // 맞춤 난이도: 최근 N문제 정답률이 UP 이상이면 한 단계 올리고, DOWN 미만이면 내린다
+    ADAPTIVE: { WINDOW: 10, MIN_ATTEMPTS: 5, UP: 80, DOWN: 50, SET_SIZE: { 5: 10, 6: 8, 7: 10 } },
+
     // 오답 원인 분석 기준
     WEAKNESS: {
       RECENT_WINDOW: 50,      // 최근 몇 문제를 볼지

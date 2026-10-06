@@ -52,6 +52,10 @@
       if (!Array.isArray(q.choices) || q.choices.length !== 4) errors.push(where + ': choices(보기)는 4개여야 합니다');
       if (C.CHOICE_LETTERS.indexOf(q.correct_answer) < 0) errors.push(where + ': correct_answer는 "A"~"D" 중 하나여야 합니다');
       if (!q.explanation || !q.explanation.summary) errors.push(where + ': explanation.summary(해설)가 필요합니다');
+      var ctxInfo = q.explanation && q.explanation.context_analysis;
+      if (ctxInfo && (!ctxInfo.before || !ctxInfo.after || !ctxInfo.clue)) {
+        errors.push(where + ': context_analysis에는 before, after, clue가 모두 필요합니다');
+      }
       var wrongChoices = q.explanation && q.explanation.wrong_choices;
       if (wrongChoices) {
         Object.keys(wrongChoices).forEach(function (letter) {

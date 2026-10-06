@@ -116,6 +116,21 @@
 
       clearLastPosition: function () { storage.remove(K.LAST_POSITION); },
 
+      // Part별 연습 세트: 새로고침해도 같은 문제·같은 순서로 이어서 풀 수 있게 저장한다 (한 번에 하나)
+      startPracticeSession: function (info) {
+        var session = {
+          id: now().getTime().toString(36),
+          title: info.title, part: info.part, mode: info.mode, type: info.type || null,
+          ids: info.ids, index: 0, createdAt: now().toISOString()
+        };
+        storage.set(K.PRACTICE_SESSION, session);
+        return session;
+      },
+      getPracticeSession: function () { return storage.get(K.PRACTICE_SESSION, null); },
+      savePracticeIndex: function (index) {
+        storage.update(K.PRACTICE_SESSION, function (s) { return s ? Object.assign({}, s, { index: index }) : s; }, null);
+      },
+
       setCurrentDay: function (day) {
         storage.update(K.PROFILE, function (saved) {
           return Object.assign(defaultProfile(), saved || {}, { currentDay: day });

@@ -281,3 +281,44 @@
 .toast-success { background: var(--color-success); color: #fff; }
 @media (prefers-color-scheme: dark) { .toast-error, .toast-success { color: #10131c; } }
 .toast-close { background: none; border: 0; color: inherit; font-size: 1.2rem; line-height: 1; cursor: pointer; padding: 0 2px; }
+
+/* ───────── Part 화면 ───────── */
+.card-title { font-size: 1.05rem; margin-bottom: 6px; }
+.part-summary { display: grid; gap: 20px; grid-template-columns: 1fr; margin-bottom: 16px; }
+@media (min-width: 760px) { .part-summary { grid-template-columns: 1fr 1.4fr auto; align-items: center; } }
+.level-name { font-size: 1.5rem; font-weight: 800; color: var(--color-primary); margin: 2px 0 4px; }
+.level-name span { font-size: 1rem; font-weight: 700; color: var(--color-text); }
+.part-summary-actions { display: flex; flex-direction: column; gap: 8px; }
+@media (max-width: 759px) { .part-summary-actions { flex-direction: row; flex-wrap: wrap; } .part-summary-actions .btn { flex: 1 1 auto; white-space: nowrap; } }
+.weak-card { margin-bottom: 8px; border-color: var(--color-warning); }
+.weak-card.is-empty { border-color: var(--color-border); }
+.weak-list { margin: 8px 0 14px; padding-left: 20px; }
+.tag-warn { background: var(--color-warning-soft); color: var(--color-warning); }
+.table-card { position: relative; padding: 4px 16px; overflow-x: auto; }
+.type-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.type-table th, .type-table td { padding: 10px 6px; border-bottom: 1px solid var(--color-border); text-align: left; vertical-align: middle; }
+.type-table tbody tr:last-child th, .type-table tbody tr:last-child td { border-bottom: 0; }
+.type-table thead th { color: var(--color-muted); font-weight: 600; font-size: .8rem; }
+.type-table .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.type-table tbody th { font-weight: 600; white-space: nowrap; }
+.type-acc { display: flex; align-items: center; gap: 8px; min-width: 140px; }
+.type-acc .meter { flex: 1; }
+.type-acc .num { min-width: 3em; }
+.type-action { text-align: right; }
+.type-action .btn { padding: 5px 12px; font-size: .85rem; }
+.btn:disabled { opacity: .45; cursor: default; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* 지문 표, 문장 삽입 문맥 분석 */
+.psg-table { width: 100%; border-collapse: collapse; margin: 6px 0 12px; font-size: .95rem; }
+.psg-table th, .psg-table td { border: 1px solid var(--color-border); padding: 6px 8px; text-align: left; }
+.psg-table th { background: var(--color-surface-2); font-family: var(--font-sans); font-size: .85rem; }
+.context-analysis { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; }
+.context-analysis dt { font-weight: 700; white-space: nowrap; }
+.context-analysis dd { margin: 0; }
+@media (max-width: 599px) {
+  .table-card { padding: 4px 10px; }
+  .type-table .col-questions { display: none; }
+  .type-table th, .type-table td { padding: 10px 4px; }
+  .type-acc { min-width: 90px; }
+}

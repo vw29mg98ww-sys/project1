@@ -25,7 +25,17 @@
     if (requestedIndex !== undefined && requestedIndex !== '' && Number.isInteger(requested) && requested >= 0 && requested < items.length) {
       start = requested;
     }
-    return { day: day, section: section, items: items, startIndex: start };
+    return { kind: 'day', day: day, section: section, items: items, startIndex: start };
+  }
+
+  // Part별 연습 세트로 세션 만들기. 저장된 세트의 문제 ID 순서를 그대로 쓴다.
+  function buildPracticeSession(content, practice, requestedIndex) {
+    if (!practice) return null;
+    var items = practice.ids.map(function (id) { return content.getQuestion(id); }).filter(Boolean);
+    var requested = Number(requestedIndex);
+    var start = requestedIndex !== undefined && requestedIndex !== '' && Number.isInteger(requested) && requested >= 0 && requested < items.length
+      ? requested : Math.min(practice.index || 0, Math.max(0, items.length - 1));
+    return { kind: 'practice', practice: practice, part: practice.part, title: practice.title, items: items, startIndex: start };
   }
 
   // 이번 세션 결과 요약
@@ -49,6 +59,7 @@
 
   TM.studyService = {
     buildSession: buildSession,
+    buildPracticeSession: buildPracticeSession,
     firstUnfinishedIndex: firstUnfinishedIndex,
     summarize: summarize,
     blankNumber: blankNumber

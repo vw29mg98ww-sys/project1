@@ -642,6 +642,204 @@ window.TM_DATA.vocabulary = {
       "day": 2,
       "difficulty": 1,
       "source": "자체 제작"
+    },
+    {
+      "word": "efficient",
+      "meaning": "효율적인",
+      "part_of_speech": "adj.",
+      "example_sentence": "The new system is more efficient than the old one.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "procedure",
+      "meaning": "절차",
+      "part_of_speech": "n.",
+      "example_sentence": "Please follow the safety procedures.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "approval",
+      "meaning": "승인",
+      "part_of_speech": "n.",
+      "example_sentence": "The plan requires approval from the board.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "contingent",
+      "meaning": "~에 달려 있는(upon/on)",
+      "part_of_speech": "adj.",
+      "example_sentence": "The offer is contingent upon a background check.",
+      "day": 3,
+      "difficulty": 4,
+      "source": "자체 제작"
+    },
+    {
+      "word": "regulatory",
+      "meaning": "규제의, 단속의",
+      "part_of_speech": "adj.",
+      "example_sentence": "The drug is awaiting regulatory approval.",
+      "day": 3,
+      "difficulty": 4,
+      "source": "자체 제작"
+    },
+    {
+      "word": "consultant",
+      "meaning": "컨설턴트, 자문 위원",
+      "part_of_speech": "n.",
+      "example_sentence": "We hired a consultant to review our process.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "permit",
+      "meaning": "허가증",
+      "part_of_speech": "n.",
+      "example_sentence": "You need a permit to park here.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "obtain",
+      "meaning": "얻다, 획득하다",
+      "part_of_speech": "v.",
+      "example_sentence": "Visitors must obtain a pass at the front desk.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "workshop",
+      "meaning": "워크숍, 연수회",
+      "part_of_speech": "n.",
+      "example_sentence": "She will lead a workshop on leadership.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "regulation",
+      "meaning": "규정, 규제",
+      "part_of_speech": "n.",
+      "example_sentence": "All staff must follow company regulations.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "applicant",
+      "meaning": "지원자",
+      "part_of_speech": "n.",
+      "example_sentence": "Applicants must submit two references.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "significantly",
+      "meaning": "상당히, 크게",
+      "part_of_speech": "adv.",
+      "example_sentence": "Sales increased significantly last quarter.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "accordingly",
+      "meaning": "그에 맞게, 따라서",
+      "part_of_speech": "adv.",
+      "example_sentence": "Plans may change, so please prepare accordingly.",
+      "day": 3,
+      "difficulty": 4,
+      "source": "자체 제작"
+    },
+    {
+      "word": "overdue",
+      "meaning": "기한이 지난",
+      "part_of_speech": "adj.",
+      "example_sentence": "The invoice is two weeks overdue.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "capacity",
+      "meaning": "수용력, 용량",
+      "part_of_speech": "n.",
+      "example_sentence": "The hall has a seating capacity of 200.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "in advance",
+      "meaning": "미리, 사전에",
+      "part_of_speech": "phr.",
+      "example_sentence": "Please book your tickets in advance.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "catering",
+      "meaning": "출장 음식 제공",
+      "part_of_speech": "n.",
+      "example_sentence": "The catering for the event was excellent.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "coordinator",
+      "meaning": "진행자, 담당자",
+      "part_of_speech": "n.",
+      "example_sentence": "Contact the event coordinator for details.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "host",
+      "meaning": "(행사를) 개최하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The city will host the conference next year.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "colleague",
+      "meaning": "동료",
+      "part_of_speech": "n.",
+      "example_sentence": "I discussed the idea with a colleague.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "waiting list",
+      "meaning": "대기자 명단",
+      "part_of_speech": "n.",
+      "example_sentence": "You have been placed on the waiting list.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "자체 제작"
+    },
+    {
+      "word": "in place of",
+      "meaning": "~ 대신에",
+      "part_of_speech": "phr.",
+      "example_sentence": "Mr. Lee will speak in place of the CEO.",
+      "day": 3,
+      "difficulty": 4,
+      "source": "자체 제작"
     }
   ]
 };

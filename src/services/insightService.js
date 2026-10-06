@@ -29,6 +29,12 @@
       insights.push({ id: 'lowest-part', tone: 'focus', message: C.PARTS[lowest].name + ' 정답률이 ' + stats.parts[lowest].accuracy + '%로 가장 낮습니다.' });
     }
 
+    // 유형별 약점: Part마다 가장 약한 유형 하나 (Part 화면의 추천 학습으로 연결)
+    (stats.weakTypes || []).forEach(function (w) {
+      insights.push({ id: 'weak-type-' + w.part, tone: 'focus', href: '#/part' + w.part,
+        message: C.PARTS[w.part].name + ' \'' + w.type + '\' 유형 정답률이 ' + w.accuracy + '%입니다. 추천 학습으로 집중 연습하세요.' });
+    });
+
     if (stats.vocab.review > 0) {
       insights.push({ id: 'vocab-review', tone: 'info', message: '복습할 단어가 ' + stats.vocab.review + '개 있습니다.' });
     }

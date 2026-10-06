@@ -60,6 +60,8 @@ src/
     dayService.js       DAY별 학습 구성·진행률·다음 학습·이어서 학습 판단
     studyService.js     문제 풀이 세션: 몇 번째 문제부터 풀지, 결과 요약
     backupService.js    백업 파일 만들기·읽기·복원
+    practiceService.js  Part별 유형 정답률, 추천 학습 영역, 연습 세트
+    difficultyService.js 맞춤 난이도(LEVEL 1~4) 추천과 문제 고르기
   storage/              학습 기록 저장 (localStorage). 저장 방식이 바뀌면 이 폴더만 수정
     storage.js          저장·읽기, 사용량, 백업용 내보내기/가져오기
     migrations.js       데이터 형식 버전 변환
@@ -120,6 +122,7 @@ tests/
 | `explanation.structure` | 문장 구조 분석 (오답일 때 표시) |
 | `explanation.wrong_choices` | 오답 보기별로 왜 틀렸는지. 키는 `"A"`~`"D"` (정답 제외) |
 | `explanation.tip` | 다음에 주의할 점 |
+| `explanation.context_analysis` | (문장 삽입 문제) `{ "before": 빈칸 앞 문장, "after": 빈칸 뒤 문장, "clue": 연결 단서 }` |
 | `vocabulary` | 관련 단어. `vocabulary.js`의 단어와 자동 연결됩니다 |
 | `question_type` | Part 5: 품사, 동사, 시제, 태, 수일치, 전치사, 접속사, 관계사, 비교, 수량 표현, 어휘, 어휘 collocation · Part 6: 문법, 어휘, 문맥, 문장 삽입 · Part 7: 세부 정보, 목적, 주제, 추론, NOT 문제, 동의어, 문장 의미, 정보 연결 |
 | `source` | 출처 (예: 자체 제작, 직접 입력한 교재 이름) |
@@ -165,6 +168,17 @@ tests/
 - 틀린 문제의 핵심 어휘는 자동으로 **복습 단어**에 등록됩니다.
 - 중간에 브라우저를 닫아도 다음에 **이어서 학습**을 누르면 풀던 곳부터 계속합니다.
 
+## Part 5 · 6 · 7 연습
+
+사이드바의 **Part 5 / Part 6 / Part 7** 메뉴에서 DAY와 별개로 연습할 수 있습니다.
+
+- **유형별 정답률**: 품사·시제·관계사(Part 5), 문법·문맥·문장 삽입(Part 6), 세부 정보·추론·정보 연결(Part 7) 등 유형별 정답률과 풀이 횟수를 보여줍니다. 유형 옆 **풀기**로 그 유형만 모아 풉니다.
+- **추천 학습 영역**: 3번 이상 풀고 정답률이 70% 미만인 유형을 자동으로 추천합니다. Dashboard에도 안내가 나옵니다.
+- **맞춤 난이도 연습**: 그 Part의 최근 10문제 정답률이 80% 이상이면 다음 연습의 난이도를 한 단계 올리고, 50% 미만이면 한 단계 내립니다 (LEVEL 1 기초 ~ LEVEL 4 900+ Challenge). 기준값은 `src/constants.js`의 `ADAPTIVE`에서 바꿀 수 있습니다.
+- 연습 순서는 **틀린 문제 → 안 푼 문제 → 맞힌 문제**이며, Part 6·7은 같은 지문의 문제를 묶어서 냅니다.
+- 연습 기록도 정답률·오답노트·학습 분석에 반영됩니다. DAY 진행률과 DAY의 "이어서 학습" 위치에는 영향을 주지 않습니다.
+- 연습 중 새로고침하거나 창을 닫아도 같은 문제 세트를 이어서 풉니다 (가장 최근 연습 세트 1개).
+
 ## DAY 진행률은 어떻게 계산되나요?
 
 - 하루 학습: Vocabulary → Part 5 → Part 6 → Part 7 → 오답 복습
@@ -191,7 +205,7 @@ tests/
 - [x] STEP 3 DAY 시스템
 - [x] STEP 4 문제 풀이 시스템
 - [x] STEP 5 학습 기록 저장
-- [ ] STEP 6 Part 5 / 6 / 7
+- [x] STEP 6 Part 5 / 6 / 7
 - [ ] STEP 7 Vocabulary
 - [ ] STEP 8 오답노트
 - [ ] STEP 9 Analytics
