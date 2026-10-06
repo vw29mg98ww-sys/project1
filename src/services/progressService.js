@@ -7,6 +7,7 @@
 //     selected: 'B', correct_answer: 'C', is_correct: false,
 //     time_ms: 41200, wrong_reason: 'vocabulary' | null, answered_at: ISO 시각 }
 // vocabState  : { 'implement': { status: 'unknown' | 'confused' | 'known', updatedAt, reviewCount } }
+// lastPosition: { day: 2, section: 'part6', index: 3, updatedAt } — 마지막으로 풀던 위치(index는 0부터)
 (function (TM) {
   'use strict';
 
@@ -78,6 +79,14 @@
         }, {});
         markStudied();
       },
+
+      getLastPosition: function () { return storage.get(K.LAST_POSITION, null); },
+
+      saveLastPosition: function (day, section, index) {
+        storage.set(K.LAST_POSITION, { day: day, section: section, index: index, updatedAt: now().toISOString() });
+      },
+
+      clearLastPosition: function () { storage.remove(K.LAST_POSITION); },
 
       setCurrentDay: function (day) {
         storage.update(K.PROFILE, function (saved) {

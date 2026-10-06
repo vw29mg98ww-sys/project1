@@ -7,7 +7,8 @@
   TM.components.renderPlaceholder = function (opts) {
     var esc = TM.dom.escapeHtml;
     var features = opts.features || [];
-    return '<section class="page">' +
+    // opts.before: 제목 위에 넣을 HTML (예: 뒤로 가기 링크)
+    return '<section class="page">' + (opts.before || '') +
       '<header class="page-header"><h1>' + esc(opts.title) + '</h1><p class="muted">' + esc(opts.description) + '</p></header>' +
       '<div class="card placeholder">' +
         '<span class="badge">STEP ' + opts.step + '에서 구현 예정</span>' +

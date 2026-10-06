@@ -7,6 +7,7 @@
   TM.routes = {
     '/dashboard': P.dashboard,
     '/day': P.day,
+    '/study': P.study,            // 메뉴에는 없고 DAY 화면에서 들어가는 학습 화면
     '/part5': P.createPartPage(5),
     '/part6': P.createPartPage(6),
     '/part7': P.createPartPage(7),

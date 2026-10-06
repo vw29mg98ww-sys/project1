@@ -6,7 +6,7 @@
 
   function fmtPct(v) { return v == null ? '—' : String(v); }
 
-  function renderHero(stats) {
+  function renderHero(stats, resume) {
     var C = TM.constants;
     var est = stats.estimate;
     var hasEstimate = est.total != null;
@@ -28,7 +28,8 @@
       '</div>' +
       '<div class="hero-action">' +
         '<a class="btn btn-primary btn-lg" href="#/day?day=' + stats.currentDay + '">오늘의 학습 시작</a>' +
-        '<div class="muted small">DAY ' + stats.currentDay + (stats.studiedToday ? ' · 오늘 학습 완료 기록 있음' : '') + '</div>' +
+        '<div class="muted small">DAY ' + stats.currentDay + (stats.studiedToday ? ' · 오늘 학습 기록 있음' : '') + '</div>' +
+        (resume ? '<a class="resume-link" href="' + resume.href + '">이어서 학습: ' + TM.dom.escapeHtml(resume.text) + ' →</a>' : '') +
       '</div>' +
     '</div>';
   }
@@ -64,6 +65,15 @@
     '</div>';
   }
 
+  // 저장된 마지막 학습 위치가 아직 이어서 할 의미가 있으면 링크 정보를 돌려준다
+  function findResume(ctx) {
+    var pos = ctx.progress.getLastPosition();
+    if (!pos || ctx.content.days.indexOf(pos.day) < 0) return null;
+    var dp = TM.dayService.computeDayProgress({ content: ctx.content, day: pos.day, attempts: ctx.progress.getAttempts(), vocabState: ctx.progress.getVocabState() });
+    if (!TM.dayService.isResumable(pos, dp)) return null;
+    return { href: TM.dayService.studyLink(pos.day, pos.section, pos.index), text: 'DAY ' + pos.day + ' · ' + TM.dayService.getSection(pos.section).label };
+  }
+
   TM.pages.dashboard = {
     title: 'Dashboard',
     render: function (ctx) {
@@ -91,7 +101,7 @@
         '<header class="page-header"><h1>Dashboard</h1>' +
           '<p class="muted">DAY 1부터 매일 조금씩, 목표 ' + C.TARGET_SCORE + '점까지.</p></header>' +
 
-        renderHero(stats) +
+        renderHero(stats, findResume(ctx)) +
         renderInsights(stats) +
 
         '<h2 class="section-title">학습 현황</h2>' +

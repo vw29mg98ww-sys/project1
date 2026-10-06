@@ -39,7 +39,7 @@
         var page = route.page || TM.pages.notFound;
         outlet.innerHTML = page.render(ctx, route.params);
         cleanup = page.mount ? page.mount(outlet, ctx, route.params) : null;
-        layout.setActive(route.path);
+        layout.setActive(page.menuPath || route.path);
         document.title = page.title + ' · ' + TM.constants.APP_NAME;
         window.scrollTo(0, 0);
       }
