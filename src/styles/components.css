@@ -277,9 +277,8 @@
   background: var(--color-text); color: var(--color-bg); box-shadow: 0 6px 24px rgba(0, 0, 0, .2); font-size: .92rem;
 }
 .toast span { flex: 1; }
-.toast-error { background: var(--color-danger); color: #fff; }
-.toast-success { background: var(--color-success); color: #fff; }
-@media (prefers-color-scheme: dark) { .toast-error, .toast-success { color: #10131c; } }
+.toast-error { background: var(--color-danger); color: var(--color-on-status); }
+.toast-success { background: var(--color-success); color: var(--color-on-status); }
 .toast-close { background: none; border: 0; color: inherit; font-size: 1.2rem; line-height: 1; cursor: pointer; padding: 0 2px; }
 
 /* ───────── Part 화면 ───────── */

@@ -16,6 +16,7 @@
   --color-danger-soft: #fdecec;
   --color-warning: #b26a00;
   --color-warning-soft: #fff4e0;
+  --color-on-status: #ffffff;   /* 성공·오류 알림 위 글자색 */
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -30,8 +31,9 @@
   --font-reading: Georgia, "Times New Roman", serif;
 }
 
+/* 다크 테마: 컴퓨터 설정이 다크일 때 (사용자가 라이트를 직접 고른 경우 제외) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --color-bg: #12141b;
     --color-surface: #1b1e28;
     --color-surface-2: #232734;
@@ -49,5 +51,30 @@
     --color-warning: #ffb74d;
     --color-warning-soft: #3a2e1a;
     --shadow-sm: none;
+    --color-on-status: #10131c;
+    color-scheme: dark;
   }
+}
+
+/* 사용자가 다크를 직접 고른 경우 */
+:root[data-theme="dark"] {
+  --color-bg: #12141b;
+  --color-surface: #1b1e28;
+  --color-surface-2: #232734;
+  --color-text: #e7e9f0;
+  --color-muted: #9aa0b6;
+  --color-border: #2f3445;
+  --color-primary: #7d93ff;
+  --color-primary-hover: #95a6ff;
+  --color-primary-soft: #252c4a;
+  --color-on-primary: #0d1022;
+  --color-success: #74d680;
+  --color-success-soft: #1d3223;
+  --color-danger: #ff8a80;
+  --color-danger-soft: #3a2224;
+  --color-warning: #ffb74d;
+  --color-warning-soft: #3a2e1a;
+  --shadow-sm: none;
+  --color-on-status: #10131c;
+  color-scheme: dark;
 }
