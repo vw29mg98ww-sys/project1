@@ -446,6 +446,132 @@ window.TM_DATA.vocabulary = {
       "source": "자체 제작"
     },
     {
+      "word": "contract",
+      "meaning": "계약(서)",
+      "part_of_speech": "n.",
+      "example_sentence": "Please sign the contract and return it by Friday.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "technician",
+      "meaning": "기술자",
+      "part_of_speech": "n.",
+      "example_sentence": "A technician will visit to repair the copier.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "identification",
+      "meaning": "신분증, 신원 확인",
+      "part_of_speech": "n.",
+      "example_sentence": "Please bring a valid form of identification.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "modify",
+      "meaning": "수정하다, 변경하다",
+      "part_of_speech": "v.",
+      "example_sentence": "You can modify your order before it ships.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "conveniently",
+      "meaning": "편리하게",
+      "part_of_speech": "adv.",
+      "example_sentence": "The hotel is conveniently located near the airport.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "within walking distance",
+      "meaning": "걸어갈 수 있는 거리에",
+      "part_of_speech": "phr.",
+      "example_sentence": "The office is within walking distance of the station.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "relevant",
+      "meaning": "관련 있는",
+      "part_of_speech": "adj.",
+      "example_sentence": "Applicants must have relevant experience.",
+      "day": 1,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "be responsible for",
+      "meaning": "~을 담당하다, 책임지다",
+      "part_of_speech": "phr.",
+      "example_sentence": "Mr. Cho is responsible for training new staff.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "relocate",
+      "meaning": "이전하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The firm will relocate its headquarters to Seoul.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "discount",
+      "meaning": "할인",
+      "part_of_speech": "n.",
+      "example_sentence": "Members receive a 10 percent discount.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "vendor",
+      "meaning": "판매업체, 납품업자",
+      "part_of_speech": "n.",
+      "example_sentence": "We are looking for a new office supply vendor.",
+      "day": 1,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "officially",
+      "meaning": "공식적으로",
+      "part_of_speech": "adv.",
+      "example_sentence": "The bridge will officially open next month.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "unanimously",
+      "meaning": "만장일치로",
+      "part_of_speech": "adv.",
+      "example_sentence": "The proposal was unanimously approved.",
+      "day": 1,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "survey",
+      "meaning": "설문 조사",
+      "part_of_speech": "n.",
+      "example_sentence": "Please complete the customer satisfaction survey.",
+      "day": 1,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
       "word": "application",
       "meaning": "지원(서), 신청(서)",
       "part_of_speech": "n.",
@@ -644,6 +770,114 @@ window.TM_DATA.vocabulary = {
       "source": "자체 제작"
     },
     {
+      "word": "facility",
+      "meaning": "시설",
+      "part_of_speech": "n.",
+      "example_sentence": "The new manufacturing facility opens in May.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "proposal",
+      "meaning": "제안(서)",
+      "part_of_speech": "n.",
+      "example_sentence": "The board reviewed the budget proposal.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "considerably",
+      "meaning": "상당히",
+      "part_of_speech": "adv.",
+      "example_sentence": "Costs have risen considerably this year.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "inspection",
+      "meaning": "점검, 검사",
+      "part_of_speech": "n.",
+      "example_sentence": "The building passed its safety inspection.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "in the absence of",
+      "meaning": "~가 없을 때, ~의 부재 시",
+      "part_of_speech": "phr.",
+      "example_sentence": "In the absence of the manager, Ms. Kim will sign the forms.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "compatible",
+      "meaning": "호환되는",
+      "part_of_speech": "adj.",
+      "example_sentence": "The printer is compatible with most laptops.",
+      "day": 2,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "individually",
+      "meaning": "개별적으로",
+      "part_of_speech": "adv.",
+      "example_sentence": "The manager met each employee individually.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "launch",
+      "meaning": "출시하다, 시작하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The company will launch a new product line in spring.",
+      "day": 2,
+      "difficulty": 1,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "authorization",
+      "meaning": "승인, 허가",
+      "part_of_speech": "n.",
+      "example_sentence": "Overtime requires prior authorization.",
+      "day": 2,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "favorably",
+      "meaning": "호의적으로",
+      "part_of_speech": "adv.",
+      "example_sentence": "The new design was favorably received.",
+      "day": 2,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "steady",
+      "meaning": "꾸준한, 안정된",
+      "part_of_speech": "adj.",
+      "example_sentence": "Sales have remained steady this quarter.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "take advantage of",
+      "meaning": "~을 이용하다",
+      "part_of_speech": "phr.",
+      "example_sentence": "Take advantage of our holiday sale.",
+      "day": 2,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
       "word": "efficient",
       "meaning": "효율적인",
       "part_of_speech": "adj.",
@@ -840,6 +1074,141 @@ window.TM_DATA.vocabulary = {
       "day": 3,
       "difficulty": 4,
       "source": "자체 제작"
+    },
+    {
+      "word": "notwithstanding",
+      "meaning": "~에도 불구하고",
+      "part_of_speech": "prep.",
+      "example_sentence": "Notwithstanding the delay, the project was a success.",
+      "day": 3,
+      "difficulty": 4,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "downturn",
+      "meaning": "(경기) 침체",
+      "part_of_speech": "n.",
+      "example_sentence": "Many firms cut costs during the economic downturn.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "contribution",
+      "meaning": "공헌, 기여",
+      "part_of_speech": "n.",
+      "example_sentence": "She was praised for her contribution to the project.",
+      "day": 3,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "provided that",
+      "meaning": "~라면(조건)",
+      "part_of_speech": "conj.",
+      "example_sentence": "You may leave early provided that your work is finished.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "remarkably",
+      "meaning": "놀랄 만큼, 현저히",
+      "part_of_speech": "adv.",
+      "example_sentence": "The new model is remarkably quiet.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "personnel",
+      "meaning": "직원들; 인사(부)",
+      "part_of_speech": "n.",
+      "example_sentence": "Contact the personnel department about your leave.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "impact",
+      "meaning": "영향",
+      "part_of_speech": "n.",
+      "example_sentence": "The policy had a positive impact on sales.",
+      "day": 3,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "compensate",
+      "meaning": "보상하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The airline compensated passengers for the delay.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "specifically",
+      "meaning": "특별히, 구체적으로",
+      "part_of_speech": "adv.",
+      "example_sentence": "This course is specifically designed for beginners.",
+      "day": 3,
+      "difficulty": 2,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "authorized",
+      "meaning": "허가받은, 공인된",
+      "part_of_speech": "adj.",
+      "example_sentence": "Authorized personnel only.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "collaborate",
+      "meaning": "협력하다",
+      "part_of_speech": "v.",
+      "example_sentence": "The two teams will collaborate on the project.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "authority",
+      "meaning": "권한; 당국",
+      "part_of_speech": "n.",
+      "example_sentence": "Only the director has the authority to approve refunds.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "exclusively",
+      "meaning": "오로지, 독점적으로",
+      "part_of_speech": "adv.",
+      "example_sentence": "This offer is available exclusively to members.",
+      "day": 3,
+      "difficulty": 4,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "in compliance with",
+      "meaning": "~을 준수하여",
+      "part_of_speech": "phr.",
+      "example_sentence": "All work is done in compliance with safety rules.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "word": "respondent",
+      "meaning": "응답자",
+      "part_of_speech": "n.",
+      "example_sentence": "Most respondents were satisfied with the service.",
+      "day": 3,
+      "difficulty": 3,
+      "source": "최근 출제 경향 반영 자체 제작"
     }
   ]
 };

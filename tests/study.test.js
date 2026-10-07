@@ -78,8 +78,9 @@ test('정답을 고르면 "정답입니다"와 해설, 기록이 저장된다', 
   keepHash();
   var env = studyEnv();
   var view = mountStudy(env, { day: '1', section: 'part5' });
-  var q = env.content.getQuestions({ day: 1, part: 5 })[0];
-  assert.ok(view.text().indexOf('DAY 1') >= 0 && view.text().indexOf('Question 1 / 10') >= 0, '진행 표시');
+  var qs = env.content.getQuestions({ day: 1, part: 5 });
+  var q = qs[0];
+  assert.ok(view.text().indexOf('DAY 1') >= 0 && view.text().indexOf('Question 1 / ' + qs.length) >= 0, '진행 표시');
   view.click('[data-letter="' + q.correct_answer + '"]');
   assert.ok(view.text().indexOf('정답입니다') >= 0);
   assert.ok(view.text().indexOf(q.explanation.summary) >= 0);
@@ -93,7 +94,7 @@ test('정답을 고르면 "정답입니다"와 해설, 기록이 저장된다', 
   view.click('[data-letter="D"]');
   assert.equal(env.progress.getAttempts().length, 1);
   view.click('[data-action="next"]');
-  assert.ok(view.text().indexOf('Question 2 / 10') >= 0);
+  assert.ok(view.text().indexOf('Question 2 / ' + qs.length) >= 0);
   view.close(); restoreHash();
 });
 
@@ -145,16 +146,17 @@ test('복습 단어 등록: 이미 아는 단어는 그대로, DAY 단어 진행
 test('중간에 닫았다가 다시 열면 다음 문제부터 이어서 푼다', function () {
   keepHash();
   var env = studyEnv();
+  var total = env.content.getQuestions({ day: 1, part: 5 }).length;
   var view = mountStudy(env, { day: '1', section: 'part5' });
   view.click('[data-letter="A"]');
   view.close(); // 다음 문제로 넘어가기 전에 닫음
   var pos = env.progress.getLastPosition();
   assert.deepEqual([pos.day, pos.section, pos.index], [1, 'part5', 1]);
   var again = mountStudy(env, { day: '1', section: 'part5', q: String(pos.index) });
-  assert.ok(again.text().indexOf('Question 2 / 10') >= 0);
+  assert.ok(again.text().indexOf('Question 2 / ' + total) >= 0);
   again.close();
   var fresh = mountStudy(env, { day: '1', section: 'part5' }); // 위치 없이 들어와도 안 푼 첫 문제
-  assert.ok(fresh.text().indexOf('Question 2 / 10') >= 0);
+  assert.ok(fresh.text().indexOf('Question 2 / ' + total) >= 0);
   fresh.close(); restoreHash();
 });
 

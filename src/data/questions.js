@@ -437,6 +437,648 @@ window.TM_DATA.questions = {
       "source": "자체 제작"
     },
     {
+      "question_id": "d1-p5-11",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Please direct all ------- about the new parking policy to the facilities office.",
+      "choices": [
+        "inquire",
+        "inquiries",
+        "inquired",
+        "inquiring"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "형용사 all 뒤, 전치사 about 앞은 명사 자리 → inquiries(문의).",
+        "evidence": "all(한정사) + ------- + about ~ : 수식어(all) 뒤에서 동사 direct의 목적어가 되는 명사가 필요합니다.",
+        "structure": "Please direct(동사) + all inquiries(목적어) + about the new parking policy(수식어) + to the facilities office",
+        "wrong_choices": {
+          "A": "inquire는 동사라 목적어 자리에 올 수 없습니다.",
+          "C": "inquired는 과거(분사)형 동사입니다.",
+          "D": "inquiring은 all 뒤에서 명사처럼 쓰지 않습니다."
+        },
+        "tip": "한정사(all, the, your) 뒤 + 전치사 앞 = 명사 자리. 최근 시험에서도 가장 꾸준히 나오는 품사 문제입니다."
+      },
+      "vocabulary": [
+        "inquiry"
+      ],
+      "grammar_point": "명사 자리",
+      "question_type": "품사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-12",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Ms. Chen prefers to review the contracts ------- before sending them to the legal team.",
+      "choices": [
+        "her",
+        "hers",
+        "herself",
+        "she"
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "summary": "문장이 이미 완전하므로 '직접, 스스로'를 강조하는 재귀대명사 herself가 정답입니다.",
+        "evidence": "review(동사) + the contracts(목적어)로 문장이 끝났습니다. 빈칸은 없어도 되는 강조 자리입니다.",
+        "structure": "Ms. Chen(주어) + prefers to review(동사) + the contracts(목적어) + herself(강조) + [before sending ~]",
+        "wrong_choices": {
+          "A": "her는 목적격/소유격이라 뒤에 명사가 오거나 동사의 목적어 자리에 와야 합니다.",
+          "B": "hers(그녀의 것)는 명사 자리에 쓰는데, 목적어는 이미 the contracts입니다.",
+          "D": "she는 주격이라 주어 자리에만 옵니다."
+        },
+        "tip": "완전한 문장 뒤 빈칸 = 재귀대명사(강조). by oneself(혼자서)도 함께 기억하세요."
+      },
+      "vocabulary": [
+        "contract"
+      ],
+      "grammar_point": "재귀대명사 강조 용법",
+      "question_type": "대명사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-13",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Our technicians will respond ------- to any equipment failure reported during business hours.",
+      "choices": [
+        "promptly",
+        "nearly",
+        "highly",
+        "mostly"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "respond promptly = 신속하게 대응하다. 동사 respond를 자연스럽게 수식하는 부사는 promptly입니다.",
+        "evidence": "고장(failure)에 '어떻게' 대응하는지를 묻는 문맥 → 신속하게(promptly).",
+        "structure": "Our technicians(주어) + will respond(동사) + promptly(부사) + to any equipment failure(전치사구)",
+        "wrong_choices": {
+          "B": "nearly(거의)는 수량·정도를 꾸미며 '거의 대응한다'는 어색합니다.",
+          "C": "highly(매우)는 형용사·분사(highly qualified)를 주로 꾸밉니다.",
+          "D": "mostly(대부분)는 '대부분 대응한다'가 되어 의미가 맞지 않습니다."
+        },
+        "tip": "부사 어휘 문제는 동사와의 짝을 외우세요: respond promptly, increase significantly, review carefully."
+      },
+      "vocabulary": [
+        "technician",
+        "promptly"
+      ],
+      "grammar_point": "부사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-14",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Mr. Patel ------- the sales team since last January.",
+      "choices": [
+        "has led",
+        "leads",
+        "will lead",
+        "is leading"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "since(~ 이후로 지금까지)가 있으므로 현재완료 has led가 정답입니다.",
+        "evidence": "since + 과거 시점(last January) → 과거부터 현재까지 계속 → 현재완료.",
+        "structure": "Mr. Patel(주어) + has led(동사) + the sales team(목적어) + since last January(기간)",
+        "wrong_choices": {
+          "B": "leads(현재)는 since와 함께 쓰지 않습니다.",
+          "C": "will lead(미래)는 과거 시점부터의 기간과 맞지 않습니다.",
+          "D": "is leading(현재진행)도 since와 어울리지 않습니다."
+        },
+        "tip": "since, for the past ~, over the last ~ 가 보이면 먼저 현재완료를 찾으세요."
+      },
+      "vocabulary": [],
+      "grammar_point": "현재완료 + since",
+      "question_type": "시제",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-15",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Visitors must show a valid form of ------- at the security desk.",
+      "choices": [
+        "identification",
+        "information",
+        "location",
+        "permission"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "보안 데스크에서 보여 주는 '유효한 신분증' = a valid form of identification.",
+        "evidence": "valid form of + identification(신분 확인 수단)은 시험에 자주 나오는 표현입니다.",
+        "structure": "Visitors(주어) + must show(동사) + a valid form of identification(목적어) + at the security desk",
+        "wrong_choices": {
+          "B": "information(정보)은 '보여 줄 유효한 형태의 정보'로 어색합니다.",
+          "C": "location(위치)은 문맥과 관계없습니다.",
+          "D": "permission(허가)은 show와 어울리지 않고 'valid form of permission'이라 쓰지 않습니다."
+        },
+        "tip": "photo ID / a valid form of identification / identification badge 모두 '신분증' 관련 빈출 표현입니다."
+      },
+      "vocabulary": [
+        "identification"
+      ],
+      "grammar_point": "명사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-16",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "The quarterly newsletter ------- to all clients by e-mail every three months.",
+      "choices": [
+        "is sent",
+        "sends",
+        "sending",
+        "has sent"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "소식지는 '보내지는' 대상이고 뒤에 목적어가 없으므로 수동태 is sent가 정답입니다.",
+        "evidence": "send는 타동사인데 빈칸 뒤에 목적어가 없고 바로 전치사(to)가 옵니다 → 수동태.",
+        "structure": "The quarterly newsletter(주어) + is sent(수동태 동사) + to all clients + by e-mail + every three months",
+        "wrong_choices": {
+          "B": "sends는 능동이라 '소식지가 보낸다'가 되고 목적어도 없습니다.",
+          "C": "sending은 동사 자리에 혼자 올 수 없습니다.",
+          "D": "has sent도 능동이라 목적어가 필요합니다."
+        },
+        "tip": "타동사 뒤에 목적어가 없으면 수동태! every three months 같은 반복 표현은 현재시제 단서입니다."
+      },
+      "vocabulary": [
+        "quarterly"
+      ],
+      "grammar_point": "현재 수동태",
+      "question_type": "태",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-17",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Customers can ------- their orders online up to 24 hours before delivery.",
+      "choices": [
+        "modify",
+        "require",
+        "decide",
+        "attend"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "배송 24시간 전까지 주문을 '변경할' 수 있다 → modify.",
+        "evidence": "their orders(목적어)와 어울리는 동사: modify/change/cancel an order.",
+        "structure": "Customers(주어) + can modify(동사) + their orders(목적어) + online + up to 24 hours before delivery",
+        "wrong_choices": {
+          "B": "require(요구하다)는 '고객이 주문을 요구하다'로 어색합니다.",
+          "C": "decide는 decide on/to부정사로 쓰며 orders와 어울리지 않습니다.",
+          "D": "attend(참석하다)는 회의·행사와 씁니다."
+        },
+        "tip": "동사 어휘는 바로 뒤 목적어와 짝을 지어 확인하세요."
+      },
+      "vocabulary": [
+        "modify"
+      ],
+      "grammar_point": "동사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-18",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "The new branch is conveniently located ------- walking distance of the train station.",
+      "choices": [
+        "within",
+        "between",
+        "among",
+        "along"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "within walking distance of ~ = ~에서 걸어갈 수 있는 거리에.",
+        "evidence": "distance(거리)와 함께 '~ 이내'를 뜻하는 전치사는 within입니다.",
+        "structure": "The new branch(주어) + is conveniently located(동사) + within walking distance of the train station",
+        "wrong_choices": {
+          "B": "between은 'between A and B'처럼 둘 사이에 씁니다.",
+          "C": "among은 셋 이상의 무리 사이에 씁니다.",
+          "D": "along(~을 따라)은 길·강 등과 씁니다."
+        },
+        "tip": "within + 거리/기간(within 30 days, within walking distance)은 매회 나오는 전치사 표현입니다."
+      },
+      "vocabulary": [
+        "conveniently",
+        "within walking distance"
+      ],
+      "grammar_point": "전치사 within",
+      "question_type": "전치사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-19",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Applicants must have ------- experience in customer service.",
+      "choices": [
+        "relevant",
+        "relevance",
+        "relevantly",
+        "relevancy"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "명사 experience를 꾸미는 형용사 자리 → relevant(관련 있는).",
+        "evidence": "have(동사) + ------- + experience(명사) : 명사 앞은 형용사 자리입니다.",
+        "structure": "Applicants(주어) + must have(동사) + relevant experience(목적어) + in customer service",
+        "wrong_choices": {
+          "B": "relevance는 명사입니다. 'relevance experience'라는 복합명사는 쓰지 않습니다.",
+          "C": "relevantly는 부사라 명사를 꾸밀 수 없습니다.",
+          "D": "relevancy도 명사입니다."
+        },
+        "tip": "명사 앞 빈칸 → 형용사. 단, 복합명사(safety regulations 등)인지 한 번 더 확인하세요."
+      },
+      "vocabulary": [
+        "applicant",
+        "relevant"
+      ],
+      "grammar_point": "형용사 자리",
+      "question_type": "품사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-20",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Free parking is ------- to all registered guests of the hotel.",
+      "choices": [
+        "available",
+        "capable",
+        "possible",
+        "reliable"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "be available to + 사람 = ~가 이용할 수 있다.",
+        "evidence": "무료 주차(Free parking)를 투숙객이 '이용할 수 있다'는 문맥 → available.",
+        "structure": "Free parking(주어) + is available(동사+보어) + to all registered guests of the hotel",
+        "wrong_choices": {
+          "B": "capable은 사람이 주어로 'be capable of -ing'로 씁니다.",
+          "C": "possible은 사람 앞에 to를 쓰지 않습니다(It is possible for ~).",
+          "D": "reliable(믿을 만한)은 의미가 맞지 않습니다."
+        },
+        "tip": "available은 'be available to 사람 / for 용도'로 Part 5·6·7 모두에 자주 나옵니다."
+      },
+      "vocabulary": [
+        "available"
+      ],
+      "grammar_point": "형용사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-21",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Please turn off all the lights ------- you leave the office.",
+      "choices": [
+        "before",
+        "during",
+        "because of",
+        "despite"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "빈칸 뒤에 주어+동사(you leave)가 있으므로 접속사 자리 → before.",
+        "evidence": "during, because of, despite는 모두 전치사라 절(주어+동사)을 이끌 수 없습니다.",
+        "structure": "Please turn off(동사) + all the lights(목적어) + [before you leave the office](부사절)",
+        "wrong_choices": {
+          "B": "during은 전치사라 뒤에 명사가 옵니다(during the meeting).",
+          "C": "because of는 전치사구라 절을 받을 수 없습니다.",
+          "D": "despite도 전치사입니다."
+        },
+        "tip": "빈칸 뒤가 '절'인지 '명사'인지 먼저 보면 접속사/전치사 문제는 3초 만에 풉니다."
+      },
+      "vocabulary": [],
+      "grammar_point": "시간 접속사",
+      "question_type": "접속사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-22",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Ms. Rivera is responsible ------- training new staff members.",
+      "choices": [
+        "for",
+        "to",
+        "with",
+        "of"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "be responsible for -ing = ~을 책임지다/담당하다.",
+        "evidence": "responsible은 '담당하는 일' 앞에 for를 씁니다.",
+        "structure": "Ms. Rivera(주어) + is responsible for(동사) + training new staff members(동명사 목적어)",
+        "wrong_choices": {
+          "B": "be responsible to + 사람은 '~에게 보고할 책임이 있다'로, 일(training) 앞에는 쓰지 않습니다.",
+          "C": "with는 responsible과 짝이 아닙니다.",
+          "D": "of는 responsible과 짝이 아닙니다."
+        },
+        "tip": "형용사+전치사 짝 암기: responsible for, eligible for, familiar with, aware of, compatible with."
+      },
+      "vocabulary": [
+        "be responsible for"
+      ],
+      "grammar_point": "형용사 + 전치사",
+      "question_type": "어휘 collocation",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-23",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "The company has decided ------- its headquarters to Chicago.",
+      "choices": [
+        "relocate",
+        "to relocate",
+        "relocating",
+        "relocated"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "decide는 to부정사를 목적어로 취합니다 → decided to relocate.",
+        "evidence": "decide, plan, hope, agree, wish → 미래 지향 동사 + to부정사.",
+        "structure": "The company(주어) + has decided(동사) + to relocate its headquarters to Chicago(to부정사 목적어)",
+        "wrong_choices": {
+          "A": "동사원형은 decided 바로 뒤에 올 수 없습니다.",
+          "C": "decide는 동명사를 목적어로 쓰지 않습니다.",
+          "D": "relocated는 동사가 두 개가 되어 문장이 성립하지 않습니다."
+        },
+        "tip": "to부정사 동사(decide, plan, agree) vs 동명사 동사(consider, avoid, suggest)를 구분해 외우세요."
+      },
+      "vocabulary": [
+        "headquarters",
+        "relocate"
+      ],
+      "grammar_point": "to부정사 목적어",
+      "question_type": "동사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-24",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "The museum offers a 10 percent ------- to students and senior citizens.",
+      "choices": [
+        "discount",
+        "payment",
+        "charge",
+        "profit"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "학생·노인에게 제공하는 '10% 할인' → discount.",
+        "evidence": "10 percent + offers ~ to 사람 → 할인 혜택.",
+        "structure": "The museum(주어) + offers(동사) + a 10 percent discount(목적어) + to students and senior citizens",
+        "wrong_choices": {
+          "B": "payment(지불)는 박물관이 제공하는 것이 아닙니다.",
+          "C": "charge(요금)를 '제공한다'는 어색합니다.",
+          "D": "profit(이익)을 학생에게 제공한다는 의미가 맞지 않습니다."
+        },
+        "tip": "offer a discount / receive a discount / at a discounted price 를 한 묶음으로 기억하세요."
+      },
+      "vocabulary": [
+        "discount"
+      ],
+      "grammar_point": "명사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-25",
+      "day": 1,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "The list of approved vendors ------- updated every month.",
+      "choices": [
+        "is",
+        "are",
+        "being",
+        "be"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "주어의 핵심은 단수 The list이므로 단수 동사 is가 정답입니다.",
+        "evidence": "of approved vendors는 수식어입니다. 바로 앞 복수명사 vendors에 속지 마세요.",
+        "structure": "The list(주어, 단수) + of approved vendors(수식어) + is updated(수동태 동사) + every month",
+        "wrong_choices": {
+          "B": "are는 복수 동사로, vendors를 주어로 착각하게 만든 함정입니다.",
+          "C": "being은 동사 자리에 혼자 올 수 없습니다.",
+          "D": "be는 동사원형이라 주어 뒤에 바로 올 수 없습니다."
+        },
+        "tip": "주어 + 전치사구 + 동사 구조에서는 전치사구를 괄호로 지우고 수일치를 보세요."
+      },
+      "vocabulary": [
+        "vendor"
+      ],
+      "grammar_point": "주어-동사 수일치",
+      "question_type": "수일치",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-26",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "The new store will open ------- at 9 A.M. on Saturday.",
+      "choices": [
+        "officially",
+        "fairly",
+        "nearly",
+        "previously"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "토요일 오전 9시에 '공식적으로' 문을 연다 → officially.",
+        "evidence": "open officially / officially open은 개업·개관 안내문의 단골 표현입니다.",
+        "structure": "The new store(주어) + will open(동사) + officially(부사) + at 9 A.M. on Saturday",
+        "wrong_choices": {
+          "B": "fairly(꽤)는 형용사·부사의 정도를 나타내 open을 꾸미기 어색합니다.",
+          "C": "nearly(거의)는 '거의 개업한다'가 되어 어색합니다.",
+          "D": "previously(이전에)는 미래 시제 will과 맞지 않습니다."
+        },
+        "tip": "시제 단서와 충돌하는 부사(previously ↔ will)부터 지우면 어휘 문제가 쉬워집니다."
+      },
+      "vocabulary": [
+        "officially"
+      ],
+      "grammar_point": "부사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-27",
+      "day": 1,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "The board ------- approved the budget proposal at yesterday's meeting.",
+      "choices": [
+        "unanimous",
+        "unanimously",
+        "unanimity",
+        "unanimousness"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "주어와 동사(approved) 사이는 동사를 꾸미는 부사 자리 → unanimously(만장일치로).",
+        "evidence": "주어 + ------- + 동사 : 문장 성분이 완전하므로 빈칸은 부사입니다.",
+        "structure": "The board(주어) + unanimously(부사) + approved(동사) + the budget proposal(목적어) + at yesterday's meeting",
+        "wrong_choices": {
+          "A": "unanimous는 형용사라 동사를 꾸밀 수 없습니다.",
+          "C": "unanimity는 명사입니다.",
+          "D": "unanimousness도 명사입니다."
+        },
+        "tip": "주어와 동사 사이, have와 p.p. 사이, be와 -ing/p.p. 사이 빈칸은 대부분 부사입니다."
+      },
+      "vocabulary": [
+        "unanimously",
+        "budget"
+      ],
+      "grammar_point": "부사 자리",
+      "question_type": "품사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-28",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Ms. Ito was asked to ------- the results of the customer survey at the meeting.",
+      "choices": [
+        "present",
+        "attend",
+        "arrive",
+        "respond"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "회의에서 설문 결과를 '발표하다' → present.",
+        "evidence": "the results(목적어)를 바로 받을 수 있고 의미도 맞는 동사는 present입니다.",
+        "structure": "Ms. Ito(주어) + was asked to present(동사) + the results of the customer survey(목적어) + at the meeting",
+        "wrong_choices": {
+          "B": "attend(참석하다)의 목적어는 회의·행사입니다.",
+          "C": "arrive는 자동사라 목적어를 바로 받을 수 없습니다(arrive at).",
+          "D": "respond는 자동사라 respond to가 필요합니다."
+        },
+        "tip": "자동사(arrive, respond, comply)는 목적어 바로 앞 빈칸에 올 수 없습니다."
+      },
+      "vocabulary": [
+        "survey"
+      ],
+      "grammar_point": "동사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-29",
+      "day": 1,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "The training manual, ------- was revised last week, is now available on the intranet.",
+      "choices": [
+        "which",
+        "who",
+        "what",
+        "where"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "선행사가 사물(The training manual)이고 빈칸 뒤에 주어가 없으므로 주격 관계대명사 which.",
+        "evidence": "콤마(,) 뒤 계속적 용법에는 that을 쓸 수 없고, 사물 선행사에는 which를 씁니다.",
+        "structure": "The training manual(주어), [which was revised last week](관계절), + is(동사) + now available",
+        "wrong_choices": {
+          "B": "who는 사람 선행사에 씁니다.",
+          "C": "what은 선행사를 포함하므로 앞에 명사가 있으면 쓸 수 없습니다.",
+          "D": "where는 관계부사라 뒤에 완전한 문장이 와야 합니다."
+        },
+        "tip": "관계사는 ① 선행사(사람/사물) ② 빈칸 뒤 문장이 완전한지 두 가지만 확인하세요."
+      },
+      "vocabulary": [
+        "revised"
+      ],
+      "grammar_point": "주격 관계대명사 which",
+      "question_type": "관계사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d1-p5-30",
+      "day": 1,
+      "part": 5,
+      "difficulty": 1,
+      "passage_id": null,
+      "question": "Employees who wish to take time off must ------- a request at least two weeks in advance.",
+      "choices": [
+        "submit",
+        "apply",
+        "register",
+        "inform"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "submit a request = 요청서를 제출하다.",
+        "evidence": "a request(목적어)와 짝이 맞는 동사는 submit입니다.",
+        "structure": "Employees [who wish to take time off](주어) + must submit(동사) + a request(목적어) + at least two weeks in advance",
+        "wrong_choices": {
+          "B": "apply는 apply for a leave처럼 전치사가 필요합니다.",
+          "C": "register(등록하다)는 request와 어울리지 않습니다.",
+          "D": "inform은 inform 사람 of 내용 구조로 씁니다."
+        },
+        "tip": "submit a request / form / report / proposal — submit의 목적어 짝은 매회 출제됩니다."
+      },
+      "vocabulary": [
+        "submit",
+        "in advance"
+      ],
+      "grammar_point": "동사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
       "question_id": "d2-p5-01",
       "day": 2,
       "part": 5,
@@ -828,6 +1470,578 @@ window.TM_DATA.questions = {
       "grammar_point": "전치사 vs 접속사",
       "question_type": "접속사",
       "source": "자체 제작"
+    },
+    {
+      "question_id": "d2-p5-13",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "All ------- for the marketing position must be submitted by May 15.",
+      "choices": [
+        "applicants",
+        "applications",
+        "apply",
+        "applied"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "제출되는(submitted) 것은 사람이 아니라 '지원서'이므로 applications.",
+        "evidence": "All 뒤 명사 자리 → 사람명사(applicants)와 사물명사(applications) 중 의미로 결정합니다.",
+        "structure": "All applications(주어) + for the marketing position + must be submitted(수동태 동사) + by May 15",
+        "wrong_choices": {
+          "A": "applicants(지원자)는 명사지만 '지원자가 제출된다'는 의미가 어색합니다.",
+          "C": "apply는 동사입니다.",
+          "D": "applied는 과거(분사)형 동사입니다."
+        },
+        "tip": "사람명사 vs 사물명사(applicant/application, attendee/attendance)는 최근 품사 문제의 대표 함정입니다."
+      },
+      "vocabulary": [
+        "application",
+        "applicant"
+      ],
+      "grammar_point": "사람명사 vs 사물명사",
+      "question_type": "품사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-14",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "------- the contract is signed, construction on the new facility will begin.",
+      "choices": [
+        "Once",
+        "Despite",
+        "Whether",
+        "During"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "'일단 ~하면'을 뜻하는 접속사 Once가 두 절을 자연스럽게 연결합니다.",
+        "evidence": "빈칸 뒤가 절(the contract is signed)이므로 접속사 자리, 의미상 '계약이 체결되면'.",
+        "structure": "[Once the contract is signed](부사절), + construction(주어) + on the new facility + will begin(동사)",
+        "wrong_choices": {
+          "B": "Despite는 전치사라 절을 받을 수 없습니다.",
+          "C": "Whether(~인지 아닌지)는 or (not)과 함께 양자택일을 나타내 의미가 어색합니다.",
+          "D": "During은 전치사입니다."
+        },
+        "tip": "once(일단 ~하면), as soon as, now that 같은 시간·조건 접속사는 최근 Part 5에서 비중이 커졌습니다."
+      },
+      "vocabulary": [
+        "contract",
+        "facility"
+      ],
+      "grammar_point": "접속사 once",
+      "question_type": "접속사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-15",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "Sales of electric vehicles have increased ------- over the past five years.",
+      "choices": [
+        "considerably",
+        "eagerly",
+        "accurately",
+        "carefully"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "increase considerably = 상당히 증가하다.",
+        "evidence": "증감 동사(increase, rise, decline)와 어울리는 정도 부사 → considerably/significantly/sharply.",
+        "structure": "Sales of electric vehicles(주어) + have increased(동사) + considerably(부사) + over the past five years",
+        "wrong_choices": {
+          "B": "eagerly(열심히)는 사람의 태도를 나타냅니다.",
+          "C": "accurately(정확하게)는 증가의 정도와 맞지 않습니다.",
+          "D": "carefully(신중하게)도 사람의 행동에 씁니다."
+        },
+        "tip": "증감 동사 + considerably / significantly / substantially / sharply 세트로 외우세요."
+      },
+      "vocabulary": [
+        "considerably"
+      ],
+      "grammar_point": "부사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-16",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "Mr. Lee's proposal was more detailed than -------.",
+      "choices": [
+        "our",
+        "ours",
+        "us",
+        "ourselves"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "비교 대상은 Mr. Lee's proposal ↔ our proposal = ours(소유대명사).",
+        "evidence": "than 뒤에 명사 없이 '우리의 것'이 필요하므로 소유대명사 ours.",
+        "structure": "Mr. Lee's proposal(주어) + was more detailed(동사+보어) + than ours(= our proposal)",
+        "wrong_choices": {
+          "A": "our는 소유격이라 뒤에 명사가 꼭 있어야 합니다.",
+          "C": "us를 쓰면 '제안서'와 '우리(사람)'를 비교하게 됩니다.",
+          "D": "ourselves는 재귀대명사로 비교 대상이 될 수 없습니다."
+        },
+        "tip": "비교 대상은 같은 종류끼리: 사람의 '제안서'와 비교하면 소유대명사(mine, yours, ours, theirs)."
+      },
+      "vocabulary": [
+        "proposal"
+      ],
+      "grammar_point": "소유대명사",
+      "question_type": "대명사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-17",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "The factory recently passed its annual safety ------- without any issues.",
+      "choices": [
+        "inspection",
+        "admission",
+        "permission",
+        "attention"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "공장이 통과한(passed) 연례 안전 '점검' → safety inspection.",
+        "evidence": "pass + inspection(점검을 통과하다)은 자주 나오는 collocation입니다.",
+        "structure": "The factory(주어) + recently passed(동사) + its annual safety inspection(목적어) + without any issues",
+        "wrong_choices": {
+          "B": "admission(입장, 입학)은 safety와 어울리지 않습니다.",
+          "C": "permission(허가)은 pass의 목적어로 쓰지 않습니다.",
+          "D": "attention(주의)은 '통과하다'와 어울리지 않습니다."
+        },
+        "tip": "pass an inspection, conduct an inspection, undergo an inspection 묶음으로 기억하세요."
+      },
+      "vocabulary": [
+        "inspection"
+      ],
+      "grammar_point": "명사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-18",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "Please consider ------- the deadline so that the team has enough time to finish the report.",
+      "choices": [
+        "extend",
+        "to extend",
+        "extending",
+        "extended"
+      ],
+      "correct_answer": "C",
+      "explanation": {
+        "summary": "consider는 동명사를 목적어로 취합니다 → consider extending.",
+        "evidence": "consider, suggest, avoid, recommend, postpone + -ing.",
+        "structure": "Please consider(동사) + extending the deadline(동명사 목적어) + [so that the team has enough time ~]",
+        "wrong_choices": {
+          "A": "동사원형은 consider 바로 뒤에 올 수 없습니다.",
+          "B": "consider는 to부정사를 목적어로 쓰지 않습니다.",
+          "D": "extended는 동사가 겹쳐 문장이 성립하지 않습니다."
+        },
+        "tip": "동명사만 목적어로 쓰는 동사: consider, suggest, recommend, avoid, postpone, finish, mind."
+      },
+      "vocabulary": [
+        "extend",
+        "deadline"
+      ],
+      "grammar_point": "동명사 목적어",
+      "question_type": "동사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-19",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "------- the absence of the director, Ms. Grant will chair the weekly meeting.",
+      "choices": [
+        "In",
+        "For",
+        "On",
+        "By"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "in the absence of ~ = ~가 없을 때, ~의 부재 시.",
+        "evidence": "absence와 결합하는 전치사는 in입니다(in the absence of).",
+        "structure": "[In the absence of the director](전치사구), + Ms. Grant(주어) + will chair(동사) + the weekly meeting(목적어)",
+        "wrong_choices": {
+          "B": "for the absence of라는 표현은 쓰지 않습니다.",
+          "C": "on the absence of도 쓰지 않습니다.",
+          "D": "by the absence of는 '부재에 의해'로 의미가 어색합니다."
+        },
+        "tip": "전치사 덩어리 암기: in the absence of, in charge of, in light of, on behalf of."
+      },
+      "vocabulary": [
+        "in the absence of"
+      ],
+      "grammar_point": "전치사 관용 표현",
+      "question_type": "어휘 collocation",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-20",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "The ------- candidates will be contacted for a second interview next week.",
+      "choices": [
+        "select",
+        "selected",
+        "selecting",
+        "selection"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "후보자들은 '선발된' 대상이므로 과거분사 selected가 명사 candidates를 꾸밉니다.",
+        "evidence": "관사(The)와 명사(candidates) 사이는 형용사 자리, 의미상 수동(선발된) → p.p.",
+        "structure": "The selected candidates(주어) + will be contacted(수동태 동사) + for a second interview + next week",
+        "wrong_choices": {
+          "A": "select는 동사원형입니다(형용사 select는 '엄선된'으로 의미가 다릅니다).",
+          "C": "selecting은 '선발하는 후보자'라는 능동 의미가 되어 어색합니다.",
+          "D": "selection candidates라는 복합명사는 쓰지 않습니다."
+        },
+        "tip": "명사가 동작을 하면 -ing, 동작을 받으면 p.p. (selected candidates, experienced staff는 예외적 관용 표현)."
+      },
+      "vocabulary": [],
+      "grammar_point": "분사형 형용사",
+      "question_type": "품사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-21",
+      "day": 2,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The software update is ------- with most older computers.",
+      "choices": [
+        "compatible",
+        "comparable",
+        "considerate",
+        "competitive"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "be compatible with ~ = ~와 호환되다.",
+        "evidence": "소프트웨어와 컴퓨터의 관계 + 전치사 with → compatible.",
+        "structure": "The software update(주어) + is compatible with(동사+보어) + most older computers",
+        "wrong_choices": {
+          "B": "comparable(비교할 만한)은 주로 to와 쓰고 '호환'의 뜻이 없습니다.",
+          "C": "considerate(사려 깊은)는 사람에게 씁니다.",
+          "D": "competitive(경쟁력 있는)는 문맥과 맞지 않습니다."
+        },
+        "tip": "철자가 비슷한 형용사(compatible / comparable / competitive)는 뒤 전치사로 구분하세요."
+      },
+      "vocabulary": [
+        "compatible"
+      ],
+      "grammar_point": "형용사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-22",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "When the new manager ------- next week, she will meet each team member individually.",
+      "choices": [
+        "arrives",
+        "will arrive",
+        "arrived",
+        "has been arriving"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "시간 부사절(When ~)에서는 미래 대신 현재시제를 씁니다 → arrives.",
+        "evidence": "next week(미래)지만 when이 이끄는 시간 부사절이므로 현재시제.",
+        "structure": "[When the new manager arrives next week](부사절), + she(주어) + will meet(동사) + each team member + individually",
+        "wrong_choices": {
+          "B": "시간·조건 부사절에서는 will을 쓰지 않습니다.",
+          "C": "arrived(과거)는 next week와 맞지 않습니다.",
+          "D": "has been arriving은 시제가 맞지 않습니다."
+        },
+        "tip": "when, before, after, once, if 부사절 안은 '현재가 미래를 대신'합니다."
+      },
+      "vocabulary": [
+        "individually"
+      ],
+      "grammar_point": "시간 부사절의 현재시제",
+      "question_type": "시제",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-23",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "The city council voted to ------- the new recycling program starting in July.",
+      "choices": [
+        "launch",
+        "gather",
+        "earn",
+        "retire"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "새 프로그램을 '시작하다, 출시하다' → launch.",
+        "evidence": "the new program(목적어) + starting in July(7월부터) → launch(개시하다).",
+        "structure": "The city council(주어) + voted to launch(동사) + the new recycling program(목적어) + starting in July",
+        "wrong_choices": {
+          "B": "gather(모으다)는 프로그램과 어울리지 않습니다.",
+          "C": "earn(벌다)은 의미가 맞지 않습니다.",
+          "D": "retire(은퇴하다)는 자동사이고 의미도 반대입니다."
+        },
+        "tip": "launch a program / product / campaign — 새로 시작하는 것에는 launch."
+      },
+      "vocabulary": [
+        "launch"
+      ],
+      "grammar_point": "동사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-24",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "Fairview Hotel is the ------- of the three hotels located near the convention center.",
+      "choices": [
+        "larger",
+        "largest",
+        "more large",
+        "large"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "the + 최상급 + of the three(셋 중에서) → the largest.",
+        "evidence": "셋 이상 중에서 '가장 ~한'은 최상급입니다.",
+        "structure": "Fairview Hotel(주어) + is(동사) + the largest(보어) + of the three hotels [located near ~]",
+        "wrong_choices": {
+          "A": "비교급 larger는 둘을 비교할 때 씁니다(the larger of the two).",
+          "C": "large의 비교급은 more large가 아니라 larger입니다.",
+          "D": "원급 large는 the ~ of the three와 함께 쓸 수 없습니다."
+        },
+        "tip": "of the two → the 비교급, of the three/all → the 최상급."
+      },
+      "vocabulary": [],
+      "grammar_point": "최상급",
+      "question_type": "비교",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-25",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "Employees must obtain ------- from their supervisor before working overtime.",
+      "choices": [
+        "authorization",
+        "appreciation",
+        "recognition",
+        "distribution"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "초과 근무 전 상사에게 받아야 하는 '승인' → authorization.",
+        "evidence": "obtain authorization/approval/permission from ~ (~로부터 승인을 받다).",
+        "structure": "Employees(주어) + must obtain(동사) + authorization(목적어) + from their supervisor + before working overtime",
+        "wrong_choices": {
+          "B": "appreciation(감사)은 미리 받아야 하는 것이 아닙니다.",
+          "C": "recognition(인정, 표창)은 문맥과 맞지 않습니다.",
+          "D": "distribution(배포)은 의미가 맞지 않습니다."
+        },
+        "tip": "approval / permission / authorization(승인) 동의어 세트로 외우세요."
+      },
+      "vocabulary": [
+        "authorization",
+        "obtain"
+      ],
+      "grammar_point": "명사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-26",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "The annual awards ceremony ------- at the Grand Plaza Hotel last Friday.",
+      "choices": [
+        "was held",
+        "held",
+        "holds",
+        "was holding"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "행사는 '개최되는' 대상이고 last Friday가 있으므로 과거 수동태 was held.",
+        "evidence": "hold(개최하다)는 타동사인데 뒤에 목적어가 없습니다 → 수동태.",
+        "structure": "The annual awards ceremony(주어) + was held(과거 수동태) + at the Grand Plaza Hotel + last Friday",
+        "wrong_choices": {
+          "B": "held(능동 과거)는 '시상식이 무언가를 개최했다'가 되고 목적어도 없습니다.",
+          "C": "holds는 현재 능동으로 시제와 태 모두 틀립니다.",
+          "D": "was holding은 능동 진행형입니다."
+        },
+        "tip": "행사(ceremony, conference, meeting) + be held = 개최되다. 매회 나오는 수동태 공식입니다."
+      },
+      "vocabulary": [],
+      "grammar_point": "과거 수동태",
+      "question_type": "태",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-27",
+      "day": 2,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Ms. Wong's presentation was ------- received by the board members.",
+      "choices": [
+        "favorably",
+        "frequently",
+        "punctually",
+        "densely"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "be favorably received = 호의적인 반응을 얻다.",
+        "evidence": "발표가 이사들에게 '어떻게' 받아들여졌는지 → favorably(호의적으로).",
+        "structure": "Ms. Wong's presentation(주어) + was favorably received(수동태 동사) + by the board members",
+        "wrong_choices": {
+          "B": "frequently(자주)는 한 번의 발표와 어울리지 않습니다.",
+          "C": "punctually(시간을 엄수하여)는 received와 의미가 맞지 않습니다.",
+          "D": "densely(빽빽하게)는 인구·숲 등에 씁니다."
+        },
+        "tip": "be well received / be favorably received(호평받다)는 어휘 문제 단골 표현입니다."
+      },
+      "vocabulary": [
+        "favorably"
+      ],
+      "grammar_point": "부사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-28",
+      "day": 2,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Online sales rose by 15 percent this quarter, ------- in-store sales remained steady.",
+      "choices": [
+        "whereas",
+        "because",
+        "unless",
+        "so that"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "온라인 매출 증가 ↔ 매장 매출 유지: 대조를 나타내는 whereas(반면에).",
+        "evidence": "두 절의 내용이 대조되므로 대조 접속사가 필요합니다.",
+        "structure": "Online sales(주어) + rose(동사) + by 15 percent this quarter, [whereas in-store sales remained steady](대조절)",
+        "wrong_choices": {
+          "B": "because는 원인을 나타내 '매장 매출이 유지되었기 때문에'가 되어 논리가 맞지 않습니다.",
+          "C": "unless(~하지 않는 한)는 조건이라 의미가 어색합니다.",
+          "D": "so that(~하도록)은 목적을 나타냅니다."
+        },
+        "tip": "접속사는 '문법(절을 받는가)' 확인 후 '의미(원인·조건·대조·양보)'로 고르세요."
+      },
+      "vocabulary": [
+        "steady"
+      ],
+      "grammar_point": "대조 접속사 whereas",
+      "question_type": "접속사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-29",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "All staff members are encouraged to take ------- of the free language courses.",
+      "choices": [
+        "advantage",
+        "benefit",
+        "use",
+        "part"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "take advantage of ~ = ~을 이용하다(활용하다).",
+        "evidence": "take ------- of 의 틀에 맞는 관용 표현은 take advantage of입니다.",
+        "structure": "All staff members(주어) + are encouraged(동사) + to take advantage of the free language courses",
+        "wrong_choices": {
+          "B": "benefit은 benefit from ~ 형태로 씁니다.",
+          "C": "use는 make use of ~로 씁니다.",
+          "D": "part는 take part in ~(참여하다)으로 전치사가 다릅니다."
+        },
+        "tip": "take advantage of / make use of / take part in / benefit from — 전치사까지 한 덩어리로 외우세요."
+      },
+      "vocabulary": [
+        "take advantage of"
+      ],
+      "grammar_point": "동사 관용 표현",
+      "question_type": "어휘 collocation",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d2-p5-30",
+      "day": 2,
+      "part": 5,
+      "difficulty": 2,
+      "passage_id": null,
+      "question": "Every employee ------- required to complete the online safety training by the end of the month.",
+      "choices": [
+        "is",
+        "are",
+        "were",
+        "have been"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "Every + 단수명사는 단수 취급 → is.",
+        "evidence": "every, each, either, neither + 단수명사 → 단수 동사.",
+        "structure": "Every employee(주어, 단수) + is required(수동태 동사) + to complete the online safety training + by the end of the month",
+        "wrong_choices": {
+          "B": "are는 복수 동사입니다.",
+          "C": "were는 복수 동사이고 시제도 맞지 않습니다.",
+          "D": "have been은 복수형입니다(단수는 has been)."
+        },
+        "tip": "every/each + 단수명사 + 단수 동사. 'be required to + 동사원형'도 함께 기억하세요."
+      },
+      "vocabulary": [],
+      "grammar_point": "every + 단수 동사",
+      "question_type": "수일치",
+      "source": "최근 출제 경향 반영 자체 제작"
     },
     {
       "question_id": "d1-p6-01",
@@ -1676,6 +2890,712 @@ window.TM_DATA.questions = {
       "grammar_point": "the number of + 단수 동사",
       "question_type": "수일치",
       "source": "자체 제작"
+    },
+    {
+      "question_id": "d3-p5-09",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "------- the economic downturn, the company reported record profits this year.",
+      "choices": [
+        "Notwithstanding",
+        "Whereas",
+        "Although",
+        "Moreover"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "빈칸 뒤가 명사구(the economic downturn)이므로 전치사 Notwithstanding(~에도 불구하고).",
+        "evidence": "경기 침체 ↔ 기록적 이익: 양보 관계 + 명사구 → 양보 전치사.",
+        "structure": "[Notwithstanding the economic downturn](전치사구), + the company(주어) + reported(동사) + record profits(목적어)",
+        "wrong_choices": {
+          "B": "Whereas는 접속사라 절이 와야 합니다.",
+          "C": "Although도 접속사라 명사구를 받을 수 없습니다.",
+          "D": "Moreover는 접속부사라 명사 앞에 쓸 수 없습니다."
+        },
+        "tip": "양보 전치사: despite, in spite of, notwithstanding. 최근 고난도 어휘·문법 문제로 자주 출제됩니다."
+      },
+      "vocabulary": [
+        "notwithstanding",
+        "downturn"
+      ],
+      "grammar_point": "양보 전치사",
+      "question_type": "전치사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-10",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Ms. Harper is ------- to receive the Employee of the Year award for her contributions to the project.",
+      "choices": [
+        "likely",
+        "possible",
+        "probable",
+        "capable"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "사람 주어 + be likely to 동사원형 = ~할 것 같다.",
+        "evidence": "사람이 주어이고 뒤에 to부정사가 오는 구조는 be likely to입니다.",
+        "structure": "Ms. Harper(주어) + is likely to receive(동사) + the Employee of the Year award(목적어) + for her contributions",
+        "wrong_choices": {
+          "B": "possible은 사람 주어 + to부정사로 쓰지 않습니다(It is possible that ~).",
+          "C": "probable도 사람 주어를 받지 않습니다(It is probable that ~).",
+          "D": "capable은 be capable of -ing로 씁니다."
+        },
+        "tip": "사람 주어 가능: likely, able, eligible, willing + to부정사 / 사람 주어 불가: possible, probable, convenient."
+      },
+      "vocabulary": [
+        "contribution"
+      ],
+      "grammar_point": "형용사 어휘(구조)",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-11",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The discount will be applied ------- the order is placed before midnight.",
+      "choices": [
+        "provided that",
+        "in case of",
+        "as well as",
+        "so as to"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "빈칸 뒤가 절이고 '~라면(조건)'의 의미 → provided that.",
+        "evidence": "자정 전에 주문하면 할인 적용: 조건 관계 + 절 → 조건 접속사.",
+        "structure": "The discount(주어) + will be applied(동사) + [provided that the order is placed before midnight](조건절)",
+        "wrong_choices": {
+          "B": "in case of는 전치사구라 절을 받을 수 없습니다.",
+          "C": "as well as는 대등한 단어·구를 연결하며 조건의 뜻이 없습니다.",
+          "D": "so as to 뒤에는 동사원형이 옵니다."
+        },
+        "tip": "조건 접속사: if, provided (that), providing (that), as long as, unless, in case."
+      },
+      "vocabulary": [
+        "provided that"
+      ],
+      "grammar_point": "조건 접속사",
+      "question_type": "접속사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-12",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The CEO's speech was ------- brief, lasting only ten minutes.",
+      "choices": [
+        "remarkably",
+        "eventually",
+        "accordingly",
+        "consequently"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "형용사 brief를 꾸며 '놀랄 만큼 짧은' → remarkably.",
+        "evidence": "형용사 앞 빈칸은 정도를 나타내는 부사가 자연스럽습니다.",
+        "structure": "The CEO's speech(주어) + was(동사) + remarkably brief(보어), + lasting only ten minutes(분사구)",
+        "wrong_choices": {
+          "B": "eventually(결국)는 동작의 결과를 나타내 형용사 brief와 어울리지 않습니다.",
+          "C": "accordingly(그에 따라)는 앞 내용에 따른 결과를 나타냅니다.",
+          "D": "consequently(그 결과)는 문장 연결 부사입니다."
+        },
+        "tip": "형용사 수식 정도 부사: remarkably, exceptionally, relatively, considerably."
+      },
+      "vocabulary": [
+        "remarkably"
+      ],
+      "grammar_point": "부사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-13",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Please contact the ------- department for questions about your benefits.",
+      "choices": [
+        "personnel",
+        "personal",
+        "personally",
+        "personality"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "personnel department = 인사부(복합명사).",
+        "evidence": "the ------- department: 관사와 명사 사이지만 '인사부'라는 복합명사가 정답입니다.",
+        "structure": "Please contact(동사) + the personnel department(목적어) + for questions about your benefits",
+        "wrong_choices": {
+          "B": "personal(개인적인)은 형용사지만 '개인적인 부서'는 의미가 맞지 않습니다.",
+          "C": "personally는 부사라 명사를 꾸밀 수 없습니다.",
+          "D": "personality department(성격 부서)는 없는 표현입니다."
+        },
+        "tip": "형용사 자리처럼 보여도 복합명사(personnel department, safety regulations, customer satisfaction)를 먼저 확인하세요."
+      },
+      "vocabulary": [
+        "personnel"
+      ],
+      "grammar_point": "복합명사",
+      "question_type": "품사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-14",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Mr. Diaz had his car ------- at the dealership before the business trip.",
+      "choices": [
+        "inspect",
+        "inspected",
+        "inspecting",
+        "to inspect"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "have + 목적어(사물) + p.p. = ~을 …되게 하다. 차는 '점검되는' 대상 → inspected.",
+        "evidence": "사역동사 have의 목적어 his car와 inspect는 수동 관계입니다.",
+        "structure": "Mr. Diaz(주어) + had(사역동사) + his car(목적어) + inspected(목적격 보어, 수동) + at the dealership",
+        "wrong_choices": {
+          "A": "동사원형은 목적어가 동작을 '하는' 능동 관계일 때 씁니다(차가 점검하지 않음).",
+          "C": "inspecting은 진행·능동 의미라 맞지 않습니다.",
+          "D": "사역동사 have는 to부정사를 목적격 보어로 쓰지 않습니다."
+        },
+        "tip": "have/get + 사물 + p.p. (have the car repaired, get the document signed)."
+      },
+      "vocabulary": [
+        "inspection"
+      ],
+      "grammar_point": "사역동사 + p.p.",
+      "question_type": "동사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-15",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The new regulations will have a significant ------- on small businesses.",
+      "choices": [
+        "impact",
+        "account",
+        "outcome",
+        "attempt"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "have an impact on ~ = ~에 영향을 미치다.",
+        "evidence": "have a significant ------- on: on과 결합해 '영향'을 뜻하는 명사 → impact.",
+        "structure": "The new regulations(주어) + will have(동사) + a significant impact(목적어) + on small businesses",
+        "wrong_choices": {
+          "B": "account는 on account of(~때문에)로 쓰며 have an account on은 의미가 다릅니다.",
+          "C": "outcome(결과)은 on과 함께 '영향'의 뜻으로 쓰지 않습니다.",
+          "D": "attempt(시도)는 attempt to/at으로 씁니다."
+        },
+        "tip": "have an impact/effect/influence on ~ 세트로 기억하세요."
+      },
+      "vocabulary": [
+        "impact",
+        "regulation"
+      ],
+      "grammar_point": "명사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-16",
+      "day": 3,
+      "part": 5,
+      "difficulty": 4,
+      "passage_id": null,
+      "question": "------- submits the best design will receive a cash prize.",
+      "choices": [
+        "Whoever",
+        "Anyone",
+        "Whomever",
+        "Those"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "빈칸이 submits의 주어이면서 문장 전체의 주어 → 복합관계대명사 Whoever(~하는 사람은 누구든지).",
+        "evidence": "동사가 두 개(submits, will receive)이므로 두 절을 잇는 연결어가 필요합니다.",
+        "structure": "[Whoever submits the best design](명사절 주어) + will receive(동사) + a cash prize(목적어)",
+        "wrong_choices": {
+          "B": "Anyone은 대명사라 접속 기능이 없습니다(Anyone who submits ~는 가능).",
+          "C": "Whomever는 목적격이라 주어 자리에 올 수 없습니다.",
+          "D": "Those는 복수라 submits와 맞지 않고 접속 기능도 없습니다."
+        },
+        "tip": "동사가 2개인데 접속사가 없다면 빈칸이 연결어(관계사·접속사)입니다."
+      },
+      "vocabulary": [],
+      "grammar_point": "복합관계대명사 whoever",
+      "question_type": "관계사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-17",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The manufacturer has agreed to ------- customers for any damage that occurred during shipping.",
+      "choices": [
+        "compensate",
+        "collaborate",
+        "accommodate",
+        "negotiate"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "compensate 사람 for 손해 = ~에게 …을 보상하다.",
+        "evidence": "customers(목적어) + for any damage 구조에 맞는 동사는 compensate입니다.",
+        "structure": "The manufacturer(주어) + has agreed to compensate(동사) + customers(목적어) + for any damage [that occurred during shipping]",
+        "wrong_choices": {
+          "B": "collaborate는 자동사라 collaborate with가 필요합니다.",
+          "C": "accommodate(수용하다)는 for damage와 어울리지 않습니다.",
+          "D": "negotiate(협상하다)는 사람을 바로 목적어로 쓰지 않습니다."
+        },
+        "tip": "compensate A for B / reimburse A for B / thank A for B — 동사 + A + for B 구조."
+      },
+      "vocabulary": [
+        "compensate"
+      ],
+      "grammar_point": "동사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-18",
+      "day": 3,
+      "part": 5,
+      "difficulty": 4,
+      "passage_id": null,
+      "question": "If the marketing team had launched the campaign earlier, sales ------- higher last quarter.",
+      "choices": [
+        "would have been",
+        "will be",
+        "had been",
+        "would be"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "If + had p.p. → 주절 would have p.p. (가정법 과거완료).",
+        "evidence": "if절이 had launched이고 last quarter(과거)에 대한 가정이므로 would have been.",
+        "structure": "[If the marketing team had launched the campaign earlier](가정법 과거완료), + sales(주어) + would have been higher(동사)",
+        "wrong_choices": {
+          "B": "will be는 실제 미래 조건문에 씁니다.",
+          "C": "had been은 주절에 단독으로 쓰지 않습니다.",
+          "D": "would be는 현재 사실 반대(가정법 과거)라 last quarter와 맞지 않습니다."
+        },
+        "tip": "if절 시제를 먼저 보세요: had p.p. ↔ would have p.p. / 과거형 ↔ would + 동사원형."
+      },
+      "vocabulary": [
+        "launch"
+      ],
+      "grammar_point": "가정법 과거완료",
+      "question_type": "동사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-19",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Sales representatives must provide receipts in order to be ------- for travel expenses.",
+      "choices": [
+        "reimbursed",
+        "refunded",
+        "reminded",
+        "retained"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "be reimbursed for expenses = 경비를 환급받다.",
+        "evidence": "영수증 제출 → 출장 경비를 '변제받다' : 사람이 주어인 reimburse 수동태.",
+        "structure": "Sales representatives(주어) + must provide(동사) + receipts(목적어) + in order to be reimbursed for travel expenses",
+        "wrong_choices": {
+          "B": "refund는 주로 돈·구매가 목적어로(refund the payment) 사람 주어 수동태 + for expenses가 어색합니다.",
+          "C": "reminded(상기된)는 의미가 맞지 않습니다.",
+          "D": "retained(보유된)는 의미가 맞지 않습니다."
+        },
+        "tip": "출장비·경비(expense)에는 reimburse, 구매 취소에는 refund."
+      },
+      "vocabulary": [
+        "reimburse",
+        "receipt"
+      ],
+      "grammar_point": "동사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-20",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The training program is ------- designed for employees who have recently been promoted.",
+      "choices": [
+        "specific",
+        "specifically",
+        "specifics",
+        "specify"
+      ],
+      "correct_answer": "B",
+      "explanation": {
+        "summary": "be와 p.p.(designed) 사이는 부사 자리 → specifically(특별히).",
+        "evidence": "is ------- designed: 수동태 사이에 들어가 동사를 꾸미는 부사가 필요합니다.",
+        "structure": "The training program(주어) + is specifically designed(수동태 동사) + for employees [who have recently been promoted]",
+        "wrong_choices": {
+          "A": "specific은 형용사라 동사를 꾸밀 수 없습니다.",
+          "C": "specifics는 명사입니다.",
+          "D": "specify는 동사입니다."
+        },
+        "tip": "be + ------- + p.p. 빈칸 = 부사. (specifically designed, newly renovated)"
+      },
+      "vocabulary": [
+        "specifically",
+        "promote"
+      ],
+      "grammar_point": "부사 자리",
+      "question_type": "품사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-21",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Only ------- members of the research team may access the laboratory.",
+      "choices": [
+        "authorized",
+        "eventual",
+        "numerous",
+        "apparent"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "실험실에 들어갈 수 있는 '허가받은' 팀원 → authorized.",
+        "evidence": "Only + ------- + members + may access: 출입 자격을 나타내는 형용사가 필요합니다.",
+        "structure": "Only authorized members of the research team(주어) + may access(동사) + the laboratory(목적어)",
+        "wrong_choices": {
+          "B": "eventual(최종적인)은 사람 명사를 꾸미기 어색합니다.",
+          "C": "numerous(많은)는 Only와 함께 '많은 구성원만'이 되어 의미가 어색합니다.",
+          "D": "apparent(명백한)는 의미가 맞지 않습니다."
+        },
+        "tip": "authorized personnel only(관계자 외 출입 금지) — 안내문 빈출 표현입니다."
+      },
+      "vocabulary": [
+        "authorized"
+      ],
+      "grammar_point": "형용사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-22",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "------- having little experience, Mr. Hwang was hired because of his strong communication skills.",
+      "choices": [
+        "Despite",
+        "Although",
+        "Even",
+        "However"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "빈칸 뒤가 동명사구(having little experience)이므로 전치사 Despite.",
+        "evidence": "경험 부족 ↔ 채용: 양보 관계 + 동명사구 → 양보 전치사.",
+        "structure": "[Despite having little experience](전치사구), + Mr. Hwang(주어) + was hired(동사) + because of his strong communication skills",
+        "wrong_choices": {
+          "B": "Although는 접속사라 주어+동사가 와야 합니다(Although he had little experience).",
+          "C": "Even은 부사라 단독으로 구를 연결할 수 없습니다(even though는 접속사).",
+          "D": "However는 접속부사라 명사구를 받을 수 없습니다."
+        },
+        "tip": "despite + 명사/동명사, although + 절 — 같은 의미, 다른 문법."
+      },
+      "vocabulary": [],
+      "grammar_point": "전치사 vs 접속사",
+      "question_type": "접속사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-23",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The two companies have agreed to ------- on the development of a new electric engine.",
+      "choices": [
+        "collaborate",
+        "combine",
+        "associate",
+        "contribute"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "collaborate on ~ = ~에 대해 협력하다.",
+        "evidence": "주어가 두 회사이고 뒤에 on + 프로젝트가 오므로 collaborate.",
+        "structure": "The two companies(주어) + have agreed to collaborate(동사) + on the development of a new electric engine",
+        "wrong_choices": {
+          "B": "combine은 타동사로 목적어가 필요하며 on과 쓰지 않습니다.",
+          "C": "associate는 associate A with B 구조입니다.",
+          "D": "contribute는 contribute to로 씁니다."
+        },
+        "tip": "동사 + 전치사 짝: collaborate on/with, contribute to, comply with, respond to."
+      },
+      "vocabulary": [
+        "collaborate"
+      ],
+      "grammar_point": "동사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-24",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "This year's conference attracted twice as ------- participants as last year's.",
+      "choices": [
+        "many",
+        "much",
+        "more",
+        "most"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "배수 + as many + 복수명사 + as ~ : 셀 수 있는 participants → many.",
+        "evidence": "as ~ as 원급 비교 사이에는 원급이 오고, 가산 복수명사 앞이므로 many.",
+        "structure": "This year's conference(주어) + attracted(동사) + twice as many participants as last year's(목적어)",
+        "wrong_choices": {
+          "B": "much는 셀 수 없는 명사에 씁니다.",
+          "C": "more는 비교급이라 as ~ as 사이에 올 수 없습니다.",
+          "D": "most는 최상급입니다."
+        },
+        "tip": "배수 비교: twice/three times + as 원급 as. 가산명사면 many, 불가산명사면 much."
+      },
+      "vocabulary": [
+        "attendee"
+      ],
+      "grammar_point": "배수 원급 비교",
+      "question_type": "비교",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-25",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "The new CEO has the ------- to make major changes to the company's structure.",
+      "choices": [
+        "authority",
+        "majority",
+        "priority",
+        "security"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "have the authority to 동사원형 = ~할 권한이 있다.",
+        "evidence": "CEO가 큰 변화를 만들 수 있는 '권한' → authority.",
+        "structure": "The new CEO(주어) + has(동사) + the authority to make major changes(목적어) + to the company's structure",
+        "wrong_choices": {
+          "B": "majority(대다수)는 to부정사와 함께 '권한'의 뜻을 만들지 못합니다.",
+          "C": "priority(우선순위)는 의미가 맞지 않습니다.",
+          "D": "security(보안)는 의미가 맞지 않습니다."
+        },
+        "tip": "-ority로 끝나는 명사 함정(authority / majority / priority)은 뒤 구조(to부정사)와 의미로 구분하세요."
+      },
+      "vocabulary": [
+        "authority"
+      ],
+      "grammar_point": "명사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-26",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "Employees ------- to wear their identification badges at all times.",
+      "choices": [
+        "are required",
+        "require",
+        "requiring",
+        "have required"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "require 사람 to do의 수동태 → be required to do(~해야 한다).",
+        "evidence": "빈칸 뒤에 목적어 없이 바로 to부정사가 오므로 수동태입니다.",
+        "structure": "Employees(주어) + are required(수동태 동사) + to wear their identification badges + at all times",
+        "wrong_choices": {
+          "B": "require는 능동이면 목적어(사람)가 필요합니다(require employees to ~).",
+          "C": "requiring은 동사 자리에 혼자 올 수 없습니다.",
+          "D": "have required도 능동이라 목적어가 필요합니다."
+        },
+        "tip": "5형식 동사(require, ask, encourage, allow) + 목적어 + to부정사 → 수동태면 be p.p. + to부정사."
+      },
+      "vocabulary": [
+        "identification"
+      ],
+      "grammar_point": "5형식 수동태",
+      "question_type": "태",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-27",
+      "day": 3,
+      "part": 5,
+      "difficulty": 4,
+      "passage_id": null,
+      "question": "The new policy applies ------- to full-time employees; part-time staff are not affected.",
+      "choices": [
+        "exclusively",
+        "mutually",
+        "punctually",
+        "extensively"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "뒤 문장(시간제 직원은 해당 없음)이 단서 → '오로지' 정규직에만 적용 = exclusively.",
+        "evidence": "apply exclusively to ~ = ~에만 적용되다. 세미콜론 뒤 내용이 의미 단서입니다.",
+        "structure": "The new policy(주어) + applies(동사) + exclusively(부사) + to full-time employees; part-time staff are not affected",
+        "wrong_choices": {
+          "B": "mutually(서로)는 둘 이상이 주고받는 관계에 씁니다.",
+          "C": "punctually(시간을 엄수하여)는 의미가 맞지 않습니다.",
+          "D": "extensively(광범위하게)는 뒤 문장(일부만 적용)과 모순됩니다."
+        },
+        "tip": "고난도 부사 어휘는 문장 뒤쪽의 단서(대조·제한)를 꼭 읽으세요."
+      },
+      "vocabulary": [
+        "exclusively"
+      ],
+      "grammar_point": "부사 어휘",
+      "question_type": "어휘",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-28",
+      "day": 3,
+      "part": 5,
+      "difficulty": 4,
+      "passage_id": null,
+      "question": "Not until the final inspection is complete ------- the building be opened to the public.",
+      "choices": [
+        "will",
+        "does",
+        "is",
+        "has"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "부정어구(Not until ~)가 문두에 오면 주어·동사가 도치 → will the building be opened.",
+        "evidence": "빈칸 뒤 동사원형 be가 있으므로 조동사 will이 앞으로 나온 도치 구문입니다.",
+        "structure": "[Not until the final inspection is complete](부정어구) + will(조동사) + the building(주어) + be opened(동사)",
+        "wrong_choices": {
+          "B": "does 뒤에는 수동태 be opened가 올 수 없고 시제도 맞지 않습니다.",
+          "C": "is 뒤에 be가 다시 올 수 없습니다.",
+          "D": "has 뒤에는 been이 와야 합니다."
+        },
+        "tip": "Not until / Only after / Never / Rarely 가 문두에 오면 '조동사 + 주어 + 동사원형' 도치를 찾으세요."
+      },
+      "vocabulary": [
+        "inspection"
+      ],
+      "grammar_point": "부정어 도치",
+      "question_type": "동사",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-29",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "All products are manufactured in ------- with international safety standards.",
+      "choices": [
+        "compliance",
+        "completion",
+        "competition",
+        "composition"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "in compliance with ~ = ~을 준수하여.",
+        "evidence": "in ------- with + 기준(standards) → in compliance with.",
+        "structure": "All products(주어) + are manufactured(수동태 동사) + in compliance with international safety standards",
+        "wrong_choices": {
+          "B": "completion(완료)은 in ~ with 구조를 만들지 않습니다.",
+          "C": "competition(경쟁)은 의미가 맞지 않습니다.",
+          "D": "composition(구성)은 의미가 맞지 않습니다."
+        },
+        "tip": "in compliance with = in accordance with = ~에 따라/준수하여. comply with(동사)와 함께 외우세요."
+      },
+      "vocabulary": [
+        "in compliance with",
+        "comply with"
+      ],
+      "grammar_point": "명사 관용 표현",
+      "question_type": "어휘 collocation",
+      "source": "최근 출제 경향 반영 자체 제작"
+    },
+    {
+      "question_id": "d3-p5-30",
+      "day": 3,
+      "part": 5,
+      "difficulty": 3,
+      "passage_id": null,
+      "question": "------- of the survey respondents said they would recommend our service to a friend.",
+      "choices": [
+        "Most",
+        "Almost",
+        "Every",
+        "Much"
+      ],
+      "correct_answer": "A",
+      "explanation": {
+        "summary": "Most of the + 복수명사 = ~의 대부분.",
+        "evidence": "of the survey respondents 앞에서 대명사로 쓰일 수 있는 수량 표현 → Most.",
+        "structure": "Most of the survey respondents(주어) + said(동사) + [they would recommend our service to a friend](목적절)",
+        "wrong_choices": {
+          "B": "Almost는 부사라 단독으로 of 앞 주어가 될 수 없습니다(almost all of ~는 가능).",
+          "C": "Every는 'every of'로 쓰지 않습니다(each of는 가능).",
+          "D": "Much는 셀 수 없는 명사에 씁니다."
+        },
+        "tip": "most of the 복수명사 ○ / almost of ✕ / almost all of ○ — 매회 나오는 수량 표현 함정입니다."
+      },
+      "vocabulary": [
+        "survey",
+        "respondent"
+      ],
+      "grammar_point": "수량 표현 most of",
+      "question_type": "수량 표현",
+      "source": "최근 출제 경향 반영 자체 제작"
     },
     {
       "question_id": "d3-p6-01",

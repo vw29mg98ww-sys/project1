@@ -28,7 +28,7 @@
       5: {
         name: 'Part 5',
         title: '단문 빈칸 채우기',
-        types: ['품사', '동사', '시제', '태', '수일치', '전치사', '접속사', '관계사', '비교', '수량 표현', '어휘', '어휘 collocation']
+        types: ['품사', '동사', '시제', '태', '수일치', '대명사', '전치사', '접속사', '관계사', '비교', '수량 표현', '어휘', '어휘 collocation']
       },
       6: {
         name: 'Part 6',
@@ -52,8 +52,8 @@
       4: { label: 'LEVEL 4', name: '900+ Challenge' }
     },
 
-    // DAY 하나에 배정하는 기본 학습량
-    DAILY_PLAN: { vocabulary: 20, part5: 10, part6: 5, part7: 5 },
+    // DAY 하나에 배정하는 기본 학습량 (Part 5는 실제 시험과 같은 30문항)
+    DAILY_PLAN: { vocabulary: 20, part5: 30, part6: 5, part7: 5 },
 
     // 오답 원인. short는 '현재 가장 취약한 영역은 ○○입니다' 문장에 쓰는 짧은 이름
     WRONG_REASONS: [
